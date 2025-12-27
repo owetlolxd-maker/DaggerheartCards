@@ -10,7 +10,7 @@
         "Guardian": ["Stalwart", "Vengeance"],
         "Seraph": ["Winged Sentinel", "Divine Wielder"],
         "Warrior": ["Call of the Brave", "Call of the Slayer"],
-        "Bard": ["Troubador", "Wordsmit"]
+        "Bard": ["Troubador", "Wordsmith"]
     },
     "cards": [
         {
@@ -2424,4 +2424,5 @@
         "subtype": null,
         "image": "Voar.png"
         }
+
 
