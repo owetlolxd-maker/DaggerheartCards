@@ -27,7 +27,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "clank.png"
+            "image": "Clank.png"
         },
         {
             "name": "Drakona",
@@ -35,7 +35,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "drakona.png"
+            "image": "Drakona.png"
         },
         {
             "name": "Elfo",
@@ -43,7 +43,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "elfo.png"
+            "image": "Elfo.png"
         },
         {
             "name": "Fada",
@@ -51,7 +51,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "fada.png"
+            "image": "Fada.png"
         },
         {
             "name": "Firbolg",
@@ -59,10 +59,10 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "firbolg.png"
+            "image": "Firbolg.png"
         },
         {
-            "name": "Fingril",
+            "name": "Fungril",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
@@ -75,7 +75,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "galapa.png"
+            "image": "Galapa.png"
         },
         {
             "name": "Gigante",
@@ -83,7 +83,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "gigante.png"
+            "image": "Gigante.png"
         },
         {
             "name": "Goblin",
@@ -91,7 +91,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "goblin.png"
+            "image": "Goblin.png"
         },
         {
             "name": "Halfling",
@@ -99,7 +99,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "halfling.png"
+            "image": "Halfling.png"
         },
         {
             "name": "Humano",
@@ -107,7 +107,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "humanos.png"
+            "image": "Humanos.png"
         },
         {
             "name": "Infernis",
@@ -115,7 +115,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "infernis.png"
+            "image": "Infernis.png"
         },
         {
             "name": "Katari",
@@ -123,7 +123,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "katari.png"
+            "image": "Katari.png"
         },
         {
             "name": "Orc",
@@ -131,7 +131,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "orc.png"
+            "image": "Orc.png"
         },
         {
             "name": "Ribbet",
@@ -139,7 +139,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "ribbet.png"
+            "image": "Ribbet.png"
         },
         {
             "name": "Simiah",
@@ -147,7 +147,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "simiah.png"
+            "image": "Simiah.png"
         },
         {
             "name": "Highborne",
@@ -2427,3 +2427,4 @@
     ]
 
 }
+
