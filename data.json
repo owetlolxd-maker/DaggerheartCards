@@ -13,216 +13,216 @@
         "Bard": ["Troubador", "Wordsmith"]
     },
     "cards": [
-        {
+            {
             "name": "Anão",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Anão.png"
-        },
-        {
+            },
+            {
             "name": "Clank",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Clank.png"
-        },
-        {
+            },
+            {
             "name": "Drakona",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Drakona.png"
-        },
-        {
+            },
+            {
             "name": "Elfo",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Elfo.png"
-        },
-        {
+            },
+            {
             "name": "Fada",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Fada.png"
-        },
-        {
+            },
+            {
             "name": "Firbolg",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Firbolg.png"
-        },
-        {
+            },
+            {
             "name": "Fungril",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Fungril.png"
-        },
-        {
+            },
+            {
             "name": "Galapa",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Galapa.png"
-        },
-        {
+            },
+            {
             "name": "Gigante",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Gigante.png"
-        },
-        {
+            },
+            {
             "name": "Goblin",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Goblin.png"
-        },
-        {
+            },
+            {
             "name": "Halfling",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Halfling.png"
-        },
-        {
+            },
+            {
             "name": "Humano",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Humanos.png"
-        },
-        {
+            },
+            {
             "name": "Infernis",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Infernis.png"
-        },
-        {
+            },
+            {
             "name": "Katari",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Katari.png"
-        },
-        {
+            },
+            {
             "name": "Orc",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Orc.png"
-        },
-        {
+            },
+            {
             "name": "Ribbet",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Ribbet.png"
-        },
-        {
+            },
+            {
             "name": "Simiah",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
             "image": "Simiah.png"
-        },
-        {
+            },
+            {
             "name": "Highborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Highborne.png"
-        },
-        {
+            },
+            {
             "name": "Loreborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Loreborne.png"
-        },
-        {
+            },
+            {
             "name": "Orderborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Orderborne.png"
-        },
-        {
+            },
+            {
             "name": "Ridgeborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Ridgeborne.png"
-        },
-        {
+            },
+            {
             "name": "Seaborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Seaborne.png"
-        },
-        {
+            },
+            {
             "name": "Slyborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Slyborne.png"
-        },
-        {
+            },
+            {
             "name": "Underborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Underborne.png"
-        },
-        {
+            },
+            {
             "name": "Wanderborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Wanderborne.png"
-        },
-        {
+            },
+            {
             "name": "Wildborne",
             "level": 1,
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
             "image": "Wildborne.png"
-        },
-        
-        {
+            },
+            
+            {
             "name": "Troubador-Foundation",
             "level": 1,
             "recoil": 0,
@@ -230,8 +230,8 @@
             "subtype": "Subclasse-Foundation",
             "subclass": "Troubador",
             "image": "Músico Errante.png"
-        },
-        {
+            },
+            {
             "name": "Troubador-Specialization",
             "level": 1,
             "recoil": 0,
@@ -239,8 +239,8 @@
             "subtype": "Subclasse-Specialization",
             "subclass": "Troubador",
             "image": "Músico Errante(1).png"
-        },
-        {
+            },
+            {
             "name": "Troubador-Maestry",
             "level": 1,
             "recoil": 0,
@@ -248,2179 +248,2180 @@
             "subtype": "Subclasse-Maestry",
             "subclass": "Troubador",
             "image": "Músico Errante(2).png"
-        },
-        {
-        "name": "Nightwalker-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Nightwalker",
-        "image": "Caminhante Noturno.png"
-    },
-    {
-        "name": "Nightwalker-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Nightwalker",
-        "image": "Caminhante Noturno(1).png"
-    },
-    {
-        "name": "Nightwalker-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Nightwalker",
-        "image": "Caminhante Noturno(2).png"
-    },
-
-    {
-        "name": "Syndicate-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Syndicate",
-        "image": "Sindicato.png"
-    },
-    {
-        "name": "Syndicate-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Syndicate",
-        "image": "Sindicato(1).png"
-    },
-    {
-        "name": "Syndicate-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Syndicate",
-        "image": "Sindicato(2).png"
-    },
-
-    {
-        "name": "Elemental Origin-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Elemental Origin",
-        "image": "Origem Elemental.png"
-    },
-    {
-        "name": "Elemental Origin-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Elemental Origin",
-        "image": "Origem Elemental(1).png"
-    },
-    {
-        "name": "Elemental Origin-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Elemental Origin",
-        "image": "Origem Elemental(2).png"
-    },
-
-    {
-        "name": "Primal Origin-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Primal Origin",
-        "image": "Origem Primal.png"
-    },
-    {
-        "name": "Primal Origin-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Primal Origin",
-        "image": "Origem Primal(1).png"
-    },
-    {
-        "name": "Primal Origin-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Primal Origin",
-        "image": "Origem Primal(2).png"
-    },
-
-    {
-        "name": "Warden of the Elements-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Warden of the Elements",
-        "image": "Guardião dos Elementos.png"
-    },
-    {
-        "name": "Warden of the Elements-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Warden of the Elements",
-        "image": "Guardião dos Elementos(1).png"
-    },
-    {
-        "name": "Warden of the Elements-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Warden of the Elements",
-        "image": "Guardião dos Elementos(2).png"
-    },
-
-    {
-        "name": "Warden of Renewal-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Warden of Renewal",
-        "image": "Guardião da Renovação.png"
-    },
-    {
-        "name": "Warden of Renewal-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Warden of Renewal",
-        "image": "Guardião da Renovação(1).png"
-    },
-    {
-        "name": "Warden of Renewal-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Warden of Renewal",
-        "image": "Guardião da Renovação(2).png"
-    },
-
-    {
-        "name": "Beastbound-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Beastbound",
-        "image": "Laço Bestial.png"
-    },
-    {
-        "name": "Beastbound-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Beastbound",
-        "image": "Laço Bestial(1).png"
-    },
-    {
-        "name": "Beastbound-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Beastbound",
-        "image": "Laço Bestial(2).png"
-    },
-
-    {
-        "name": "Wayfinder-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Wayfinder",
-        "image": "Explorador.png"
-    },
-    {
-        "name": "Wayfinder-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Wayfinder",
-        "image": "Explorador(1).png"
-    },
-    {
-        "name": "Wayfinder-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Wayfinder",
-        "image": "Explorador(2).png"
-    },
-
-    {
-        "name": "Wordsmith-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Wordsmith",
-        "image": "Artífice das Palavras.png"
-    },
-    {
-        "name": "Wordsmith-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Wordsmith",
-        "image": "Artífice das Palavras(1).png"
-    },
-    {
-        "name": "Wordsmith-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Wordsmith",
-        "image": "Artífice das Palavras(2).png"
-    },
-    {
-        "name": "School of Knowledge-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "School of Knowledge",
-        "image": "Escola do Conhecimento.png"
-    },
-    {
-        "name": "School of Knowledge-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "School of Knowledge",
-        "image": "Escola do Conhecimento(1).png"
-    },
-    {
-        "name": "School of Knowledge-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "School of Knowledge",
-        "image": "Escola do Conhecimento(2).png"
-    },
-
-    {
-        "name": "School of War-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "School of War",
-        "image": "Escola da Guerra.png"
-    },
-    {
-        "name": "School of War-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "School of War",
-        "image": "Escola da Guerra(1).png"
-    },
-    {
-        "name": "School of War-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "School of War",
-        "image": "Escola da Guerra(2).png"
-    },
-
-    {
-        "name": "Stalwart-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Stalwart",
-        "image": "robusto.png"
-    },
-    {
-        "name": "Stalwart-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Stalwart",
-        "image": "robusto(1).png"
-    },
-    {
-        "name": "Stalwart-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Stalwart",
-        "image": "robusto(2).png"
-    },
-
-    {
-        "name": "Vengeance-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Vengeance",
-        "image": "Vingança.png"
-    },
-    {
-        "name": "Vengeance-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Vengeance",
-        "image": "Vingança(1).png"
-    },
-    {
-        "name": "Vengeance-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Vengeance",
-        "image": "Vingança(2).png"
-    },
-
-    {
-        "name": "Winged Sentinel-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Winged Sentinel",
-        "image": "Sentinela Alado.png"
-    },
-    {
-        "name": "Winged Sentinel-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Winged Sentinel",
-        "image": "Sentinela Alado(1).png"
-    },
-    {
-        "name": "Winged Sentinel-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Winged Sentinel",
-        "image": "Sentinela Alado(2).png"
-    },
-
-    {
-        "name": "Divine Wielder-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Divine Wielder",
-        "image": "portador divino.png"
-    },
-    {
-        "name": "Divine Wielder-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Divine Wielder",
-        "image": "portador divino(1).png"
-    },
-    {
-        "name": "Divine Wielder-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Divine Wielder",
-        "image": "portador divino(2).png"
-    },
-
-    {
-        "name": "Call of the Brave-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Call of the Brave",
-        "image": "Chamada dos Bravos.png"
-    },
-    {
-        "name": "Call of the Brave-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Call of the Brave",
-        "image": "Chamada dos Bravos(1).png"
-    },
-    {
-        "name": "Call of the Brave-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Call of the Brave",
-        "image": "Chamada dos Bravos(2).png"
-    },
-
-    {
-        "name": "Call of the Slayer-Foundation",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Foundation",
-        "subclass": "Call of the Slayer",
-        "image": "Chamada do Matador.png"
-    },
-    {
-        "name": "Call of the Slayer-Specialization",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Specialization",
-        "subclass": "Call of the Slayer",
-        "image": "Chamada do Matador(1).png"
-    },
-    {
-        "name": "Call of the Slayer-Maestry",
-        "level": 1,
-        "recoil": 0,
-        "type": "Subclasse",
-        "subtype": "Subclasse-Maestry",
-        "subclass": "Call of the Slayer",
-        "image": "Chamada do Matador(2).png"
-    },
-    {
-        "name": "APOIE-SE EM MIM",
-        "domain": "Valor",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Apoie-se em Mim.png"
-    },
-    {
-        "name": "ARMADURA INABALÁVEL",
-        "domain": "Valor",
-        "level": 10,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Armadura Inabalável.png"
-    },
-    {
-        "name": "ARMADUREIRO",
-        "domain": "Valor",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Armadureiro.png"
-    },
-    {
-        "name": "DEIXE PASSAR",
-        "domain": "Valor",
-        "level": 7,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Deixe Passar.png"
-    },
-    {
-        "name": "EMPURRÃO FORTE",
-        "domain": "Valor",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Empurrão Forte.png"
-    },
-    {
-        "name": "ERGA-SE",
-        "domain": "Valor",
-        "level": 6,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Erga-se.png"
-    },
-    {
-        "name": "EU SOU SEU ESCUDO",
-        "domain": "Valor",
-        "level": 1,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Eu Sou Seu Escudo.png"
-    },
-    {
-        "name": "GOLPE ESTIMULANTE",
-        "domain": "Valor",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Golpe Estimulante.png"
-    },
-    {
-        "name": "GOLPE NO CHÃO",
-        "domain": "Valor",
-        "level": 8,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Golpe no Chão.png"
-    },
-    {
-        "name": "INEVITÁVEL",
-        "domain": "Valor",
-        "level": 6,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Inevitável.png"
-    },
-    {
-        "name": "INQUEBRÁVEL",
-        "domain": "Valor",
-        "level": 10,
-        "recoil": 4,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Inquebrável.png"
-    },
-    {
-        "name": "INSPURAÇÃO CRÍTICA",
-        "domain": "Valor",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Inspuração Crítica.png"
-    },
-    {
-        "name": "LIDERAR PELO EXEMPLO",
-        "domain": "Valor",
-        "level": 9,
-        "recoil": 3,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Liderar pelo Exemplo.png"
-    },
-    {
-        "name": "MANTENHA A POSIÇÃO",
-        "domain": "Valor",
-        "level": 9,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Mantenha a Posição.png"
-    },
-    {
-        "name": "PELE DURA",
-        "domain": "Valor",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Pele Dura.png"
-    },
-    {
-        "name": "PRESENÇA AUDAZ",
-        "domain": "Valor",
-        "level": 2,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Presença Audaz.png"
-    },
-    {
-        "name": "PROVOCAÇÃO",
-        "domain": "Valor",
-        "level": 4,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Provocação.png"
-    },
-    {
-        "name": "QUEBRADOR CORPORAL",
-        "domain": "Valor",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Quebrador Corporal.png"
-    },
-    {
-        "name": "SURTO TOTAL",
-        "domain": "Valor",
-        "level": 8,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Surto Total.png"
-    },
-    {
-        "name": "TANQUE DE SUPORTE",
-        "domain": "Valor",
-        "level": 4,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tanque de Suporte.png"
-    },
-    {
-        "name": "TOCADO PELO VALOR",
-        "domain": "Valor",
-        "level": 7,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tocado pelo Valor.png"
-    },
-    {
-        "name": "ADIVINHAÇÃO",
-        "domain": "Splendor",
-        "level": 4,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Adivinhação.png"
-    },
-    {
-        "name": "AURA AVASSALADORA",
-        "domain": "Splendor",
-        "level": 9,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Aura Avassaladora.png"
-    },
-    {
-        "name": "AURA DE ESCUDO",
-        "domain": "Splendor",
-        "level": 8,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Aura de Escudo.png"
-    },
-    {
-        "name": "FAROL BRILHANTE",
-        "domain": "Splendor",
-        "level": 1,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Farol Brilhante.png"
-    },
-    {
-        "name": "GOLPE CURATIVO",
-        "domain": "Splendor",
-        "level": 7,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Golpe Curativo.png"
-    },
-    {
-        "name": "GOLPE DIVINO",
-        "domain": "Splendor",
-        "level": 5,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Golpe Divino.png"
-    },
-    {
-        "name": "GUARDIÃO DA VIDA",
-        "domain": "Splendor",
-        "level": 4,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Guardião da Vida.png"
-    },
-    {
-        "name": "LUS OFUSCANTE",
-        "domain": "Splendor",
-        "level": 8,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Lus Ofuscante.png"
-    },
-    {
-        "name": "MÃOS CURATIVAS",
-        "domain": "Splendor",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Mãos Curativas.png"
-    },
-    {
-        "name": "MOLDAR MATERIAL",
-        "domain": "Splendor",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Moldar Material.png"
-    },
-    {
-        "name": "PALAVRAS FINAIS",
-        "domain": "Splendor",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Palavras Finais.png"
-    },
-    {
-        "name": "RAIO DA SALVAÇÃO",
-        "domain": "Splendor",
-        "level": 9,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Raio da Salvação.png"
-    },
-    {
-        "name": "REFORÇO",
-        "domain": "Splendor",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Reforço.png"
-    },
-    {
-        "name": "RESURREIÇÃO",
-        "domain": "Splendor",
-        "level": 10,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Ressurreição.png"
-    },
-    {
-        "name": "RESTAURAÇÃO",
-        "domain": "Splendor",
-        "level": 6,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Restauração.png"
-    },
-    {
-        "name": "REVIGORAMENTO",
-        "domain": "Splendor",
-        "level": 10,
-        "recoil": 3,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Revigoramento.png"
-    },
-    {
-        "name": "SEGUNDO FÔLEGO",
-        "domain": "Splendor",
-        "level": 3,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Segundo Fôlego.png"
-    },
-    {
-        "name": "TOCADO DO SPLENDOR",
-        "domain": "Splendor",
-        "level": 7,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tocado do Splendor.png"
-    },
-    {
-        "name": "TOQUE CURATIVO",
-        "domain": "Splendor",
-        "level": 1,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Toque Curativo.png"
-    },
-    {
-        "name": "VOZ DA RAZÃO",
-        "domain": "Splendor",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Voz da Razão.png"
-    },
-    {
-        "name": "ZONA DE PROTEÇÃO",
-        "domain": "Splendor",
-        "level": 6,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Zona de Proteção.png"
-    },
-    {
-        "name": "APERTO DA MORTE",
-        "domain": "Sage",
-        "level": 4,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Aperto da Morte.png"
-    },
-    {
-        "name": "BARREIRA REJUVENESCEDORA",
-        "domain": "Sage",
-        "level": 8,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Barreira Rejuvenescadora.png"
-    },
-    {
-        "name": "CAMPO DE CURA",
-        "domain": "Sage",
-        "level": 4,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Campo de Cura.png"
-    },
-    {
-        "name": "CAULE IMPONENTE",
-        "domain": "Sage",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Caule Imponente.png"
-    },
-    {
-        "name": "COLETOR",
-        "domain": "Sage",
-        "level": 6,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Coletor.png"
-    },
-    {
-        "name": "CONJURADOR ENXAME",
-        "domain": "Sage",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Conjurador Enxame.png"
-    },
-    {
-        "name": "DOMÍNIO DAS PLANTAS",
-        "domain": "Sage",
-        "level": 9,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Domínio das Plantas.png"
-    },
-    {
-        "name": "EMARANHADO CRUEL",
-        "domain": "Sage",
-        "level": 1,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Emaranhado Cruel.png"
-    },
-    {
-        "name": "FAMILIAR NATURAL",
-        "domain": "Sage",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Familiar Natural.png"
-    },
-    {
-        "name": "FORÇA DA NATUREZA",
-        "domain": "Sage",
-        "level": 10,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Força da Natureza.png"
-    },
-    {
-        "name": "FOREST SPRITES",
-        "domain": "Sage",
-        "level": 8,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Forest Sprites.png"
-    },
-    {
-        "name": "FORTALEZA SELVAGEM",
-        "domain": "Sage",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Fortaleza Selvagem.png"
-    },
-    {
-        "name": "LÍNGUA DA NATUREZA",
-        "domain": "Sage",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Língua da Natureza.png"
-    },
-    {
-        "name": "OMNTARIAS",
-        "domain": "Sage",
-        "level": 6,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Omntarias.png"
-    },
-    {
-        "name": "PELE ESPINHOSA",
-        "domain": "Sage",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Pele Espinhosa.png"
-    },
-    {
-        "name": "PORJÉTIL CORROSIVO",
-        "domain": "Sage",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Porjétil Corrosivo.png"
-    },
-    {
-        "name": "RASTREADOR HABILIDOSO",
-        "domain": "Sage",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Rastreador Habilidoso.png"
-    },
-    {
-        "name": "SURTO SELVAGEM",
-        "domain": "Sage",
-        "level": 7,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Surto Selvagem.png"
-    },
-    {
-        "name": "TEMPESTADE",
-        "domain": "Sage",
-        "level": 10,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tempestade.png"
-    },
-    {
-        "name": "TEMPLO DAS SELVAS",
-        "domain": "Sage",
-        "level": 9,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Templo das Selvas.png"
-    },
-    {
-        "name": "TOCADO PELO SABER",
-        "domain": "Sage",
-        "level": 7,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tocado pelo Saber.png"
-    },
-    {
-        "name": "ABRIR E PUXAR",
-        "domain": "Midnight",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Abrir e Puxar.png"
-    },
-    {
-        "name": "CAÇADOR DAS SOMBRAS",
-        "domain": "Midnight",
-        "level": 8,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Caçador das Sombras.png"
-    },
-    {
-        "name": "CARGA MÁGICA",
-        "domain": "Midnight",
-        "level": 8,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Carga Mágica.png"
-    },
-    {
-        "name": "CHUVA DE LÂMINAS",
-        "domain": "Midnight",
-        "level": 1,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Chuva de Lâminas.png"
-    },
-    {
-        "name": "DISFARCE EM MASSA",
-        "domain": "Midnight",
-        "level": 6,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Disfarce em Massa.png"
-    },
-    {
-        "name": "DISFARCE INCRÍVEL",
-        "domain": "Midnight",
-        "level": 1,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Disfarce Incrível.png"
-    },
-    {
-        "name": "ECLIPSE",
-        "domain": "Midnight",
-        "level": 10,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Eclipse.png"
-    },
-    {
-        "name": "ESPECTRO DA ESCURIDÃO",
-        "domain": "Midnight",
-        "level": 10,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Espectro da Escuridão.png"
-    },
-    {
-        "name": "ESPÍRITO DA MEIA-NOITE",
-        "domain": "Midnight",
-        "level": 2,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Espírito da Meia-noite.png"
-    },
-    {
-        "name": "ESQUIVA DESAPARECENTE",
-        "domain": "Midnight",
-        "level": 7,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Esquiva Desaparecente.png"
-    },
-    {
-        "name": "ESTRANGULAMENTO",
-        "domain": "Midnight",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Estrangulamento.png"
-    },
-    {
-        "name": "EXPERT EM FURTIVIDADE",
-        "domain": "Midnight",
-        "level": 4,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Expert em Furtividade.png"
-    },
-    {
-        "name": "GLIFO DO CREPÚSCULO",
-        "domain": "Midnight",
-        "level": 4,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Glifo do Crepúsculo.png"
-    },
-    {
-        "name": "RETIRADA FANTASMA",
-        "domain": "Midnight",
-        "level": 5,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Retirada Fantasma.png"
-    },
-    {
-        "name": "SILÊNCIO",
-        "domain": "Midnight",
-        "level": 5,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Silêncio.png"
-    },
-    {
-        "name": "SUSSUROS SOMBRIOS",
-        "domain": "Midnight",
-        "level": 6,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Sussurros Sombrios.png"
-    },
-    {
-        "name": "TERROR NOTURNO",
-        "domain": "Midnight",
-        "level": 9,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Terror Noturno.png"
-    },
-    {
-        "name": "TOCADO PELA MEIA-NOITE",
-        "domain": "Midnight",
-        "level": 7,
-        "recoil": 2,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tocado pela Meia-noite.png"
-    },
-    {
-        "name": "TRIBUTO DO CREPÚSCULO",
-        "domain": "Midnight",
-        "level": 9,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Tributo do Crepúsculo.png"
-    },
-    {
-        "name": "VÉU DA NOITE",
-        "domain": "Midnight",
-        "level": 3,
-        "recoil": 1,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Véu da Noite.png"
-    },
-    {
-        "name": "VINCULAR SOMBRAS",
-        "domain": "Midnight",
-        "level": 2,
-        "recoil": 0,
-        "type": "Loadout",
-        "subtype": null,
-        "image": "Vincular Sombras.png"
-    },
-    {
-  "name": "BRILHO HIPNÓTICO",
-  "domain": "Grace",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Brilho Hipnótico.png"
-},
-{
-  "name": "CARISMA INFINITO",
-  "domain": "Grace",
-  "level": 7,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Carisma Infinito.png"
-},
-{
-  "name": "DISCURSO ACALMANTE",
-  "domain": "Grace",
-  "level": 4,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Discurso Acalmante.png"
-},
-{
-  "name": "ENCANTAR",
-  "domain": "Grace",
-  "level": 1,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Encantar.png"
-},
-{
-  "name": "ENCRENQUEIRO",
-  "domain": "Grace",
-  "level": 2,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Encrenqueiro.png"
-},
-{
-  "name": "ENFEITIÇAR EM MASSA",
-  "domain": "Grace",
-  "level": 8,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Enfeitiçar em Massa.png"
-},
-{
-  "name": "ENGANADOR HÁBIL",
-  "domain": "Grace",
-  "level": 1,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Enganador Hábil.png"
-},
-{
-  "name": "IMITADOR",
-  "domain": "Grace",
-  "level": 9,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Imitador.png"
-},
-{
-  "name": "INVISIBILIDADE",
-  "domain": "Grace",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Invisibilidade.png"
-},
-{
-  "name": "MERGULHADOR DE PENSAMENTOS",
-  "domain": "Grace",
-  "level": 5,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Mergulhador de Pensamentos.png"
-},
-{
-  "name": "MESTRE DO OFÍCIO",
-  "domain": "Grace",
-  "level": 9,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Mestre do Ofício.png"
-},
-{
-  "name": "NÃO CONTE MENTIRAS",
-  "domain": "Grace",
-  "level": 2,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Não Conte Mentiras.png"
-},
-{
-  "name": "NOTÓRIO",
-  "domain": "Grace",
-  "level": 10,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Notório.png"
-},
-{
-  "name": "NUNCA OFUSCADO",
-  "domain": "Grace",
-  "level": 6,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Nunca Ofuscado.png"
-},
-{
-  "name": "PALAVRAS INSPIRADORAS",
-  "domain": "Grace",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Palavras Inspiradoras.png"
-},
-{
-  "name": "PELOS SEUS OLHOS",
-  "domain": "Grace",
-  "level": 4,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Pelos Seus Olhos.png"
-},
-{
-  "name": "PROJEÇÃO ASTRAL",
-  "domain": "Grace",
-  "level": 8,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Projeção Astral.png"
-},
-{
-  "name": "REPRISE",
-  "domain": "Grace",
-  "level": 10,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Reprise.png"
-},
-{
-  "name": "SHARE THE BURDEN",
-  "domain": "Grace",
-  "level": 6,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Share the Burden.png"
-},
-{
-  "name": "TOCADO PELA GRAÇA",
-  "domain": "Grace",
-  "level": 7,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tocado pela Graça.png"
-},
-{
-  "name": "WORDS OF DISCORD",
-  "domain": "Grace",
-  "level": 5,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Words of Discord.png"
-},
-    {
-  "name": "BANIR",
-  "domain": "Codex",
-  "level": 6,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Banir.png"
-},
-{
-  "name": "LIVRO DE AVA",
-  "domain": "Codex",
-  "level": 1,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Ava.png"
-},
-{
-  "name": "LIVRO DE EXOTA",
-  "domain": "Codex",
-  "level": 4,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Exota.png"
-},
-{
-  "name": "LIVRO DE GRYNN",
-  "domain": "Codex",
-  "level": 4,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Grynn.png"
-},
-{
-  "name": "LIVRO DE HOMET",
-  "domain": "Codex",
-  "level": 7,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Homet.png"
-},
-{
-  "name": "LIVRO DE ILLIAT",
-  "domain": "Codex",
-  "level": 1,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Illiat.png"
-},
-{
-  "name": "LIVRO DE KORVAX",
-  "domain": "Codex",
-  "level": 3,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Korvax.png"
-},
-{
-  "name": "LIVRO DE NORAI",
-  "domain": "Codex",
-  "level": 3,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Norai.png"
-},
-{
-  "name": "LIVRO DE SITIL",
-  "domain": "Codex",
-  "level": 2,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Sitil.png"
-},
-{
-  "name": "LIVRO DE TYFAR",
-  "domain": "Codex",
-  "level": 1,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Tyfar.png"
-},
-{
-  "name": "LIVRO DE VAGRAS",
-  "domain": "Codex",
-  "level": 2,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Vagras.png"
-},
-{
-  "name": "LIVRO DE VYOLA",
-  "domain": "Codex",
-  "level": 8,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Vyola.png"
-},
-{
-  "name": "LIVRO DE YARROW",
-  "domain": "Codex",
-  "level": 10,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro de Yarrow.png"
-},
-{
-  "name": "LIVRO DO RONIN",
-  "domain": "Codex",
-  "level": 9,
-  "recoil": 4,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Livro do Ronin.png"
-},
-{
-  "name": "MANIFESTAR MURALHA",
-  "domain": "Codex",
-  "level": 5,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Manifestar Muralha.png"
-},
-{
-  "name": "ONDA DE DESINTEGRAÇÃO",
-  "domain": "Codex",
-  "level": 9,
-  "recoil": 4,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Onda de Desintegração.png"
-},
-{
-  "name": "REFÚGIO SEGURO",
-  "domain": "Codex",
-  "level": 8,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Refúgio Seguro.png"
-},
-{
-  "name": "SÍMBOLO DA RETALIAÇÃO",
-  "domain": "Codex",
-  "level": 6,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Símbolo da Retaliação.png"
-},
-{
-  "name": "TELEPORTE",
-  "domain": "Codex",
-  "level": 5,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Teleporte.png"
-},
-{
-  "name": "TOCADO PELO CÓDICE",
-  "domain": "Codex",
-  "level": 7,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tocado pelo Códice.png"
-},
-{
-  "name": "UNIÃO TRANSCENDENTE",
-  "domain": "Codex",
-  "level": 10,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "União Transcendente.png"
-},
-        {
-  "name": "ABORDAGEM ESTRATÉGICA",
-  "domain": "Bone",
-  "level": 2,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Abordagem Estratégica.png"
-},
-{
-  "name": "CONHEÇA TEU INIMIGO",
-  "domain": "Bone",
-  "level": 5,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Conheça Teu Inimigo.png"
-},
-{
-  "name": "CORRIDA DA MORTE",
-  "domain": "Bone",
-  "level": 10,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Corrida da Morte.png"
-},
-{
-  "name": "DOMINAR",
-  "domain": "Bone",
-  "level": 8,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Dominar.png"
-},
-{
-  "name": "EU VI CHEGANDO",
-  "domain": "Bone",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Eu Vi Chegando.png"
-},
-{
-  "name": "FEROCIDADE",
-  "domain": "Bone",
-  "level": 2,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Ferocidade.png"
-},
-{
-  "name": "GOLPE ARRASADOR",
-  "domain": "Bone",
-  "level": 8,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Golpe Arrasador.png"
-},
-{
-  "name": "GOLPE ASSINATURA",
-  "domain": "Bone",
-  "level": 5,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Golpe Assinatura.png"
-},
-{
-  "name": "GOLPE ESTILHAÇANTE",
-  "domain": "Bone",
-  "level": 9,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Golpe Estilhaçante.png"
-},
-{
-  "name": "IMPULSO",
-  "domain": "Bone",
-  "level": 4,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Impulso.png"
-},
-{
-  "name": "INTOCÁVEL",
-  "domain": "Bone",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Intocável.png"
-},
-{
-  "name": "MANOBRAS ÁGEIS",
-  "domain": "Bone",
-  "level": 1,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Manobras Ágeis.png"
-},
-{
-  "name": "NA BEIRA",
-  "domain": "Bone",
-  "level": 9,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Na Beira.png"
-},
-{
-  "name": "PASSO ÁGIL",
-  "domain": "Bone",
-  "level": 10,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Passo Ágil.png"
-},
-{
-  "name": "PRECISÃO CRUEL",
-  "domain": "Bone",
-  "level": 7,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Precisão Cruel.png"
-},
-{
-  "name": "PREPARAR",
-  "domain": "Bone",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Preparar.png"
-},
-{
-  "name": "RECUPERAÇÃO",
-  "domain": "Bone",
-  "level": 6,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Recuperação.png"
-},
-{
-  "name": "REDIRECIONAR",
-  "domain": "Bone",
-  "level": 4,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Redirecionar.png"
-},
-{
-  "name": "RESPOSTA RÁPIDA",
-  "domain": "Bone",
-  "level": 6,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Resposta Rápida.png"
-},
-{
-  "name": "TÁTICO",
-  "domain": "Bone",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tático.png"
-},
-{
-  "name": "TOCADO PELO OSSO",
-  "domain": "Bone",
-  "level": 7,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tocado pelo Osso.png"
-},
-        {
-  "name": "ARMADURA FORTIFICADA",
-  "domain": "Blade",
-  "level": 4,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Armadura Fortificada.png"
-},
-{
-  "name": "CONFUSÃO",
-  "domain": "Blade",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Confusão.png"
-},
-{
-  "name": "ENDURECIDO PELA BATALHA",
-  "domain": "Blade",
-  "level": 6,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Endurecido pela Batalha.png"
-},
-{
-  "name": "FOCO MORTAL",
-  "domain": "Blade",
-  "level": 4,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Foco Mortal.png"
-},
-{
-  "name": "FRENESI",
-  "domain": "Blade",
-  "level": 8,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Frenesi.png"
-},
-{
-  "name": "FÚRIA CRESCENTE",
-  "domain": "Blade",
-  "level": 6,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Fúria Crescente.png"
-},
-{
-  "name": "GOLPE CEIFADOR",
-  "domain": "Blade",
-  "level": 9,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Golpe Ceifador.png"
-},
-{
-  "name": "GOLPE RASO",
-  "domain": "Blade",
-  "level": 7,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Golpe Raso.png"
-},
-{
-  "name": "GRITO DE BATALHA",
-  "domain": "Blade",
-  "level": 8,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Grito de Batalha.png"
-},
-{
-  "name": "IMPRUDENTE",
-  "domain": "Blade",
-  "level": 2,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Imprudente.png"
-},
-{
-  "name": "LAÇO DE SOLDADO",
-  "domain": "Blade",
-  "level": 2,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Laço de Soldado.png"
-},
-{
-  "name": "LEVANTAR-SE",
-  "domain": "Blade",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Levantar-se.png"
-},
-{
-  "name": "LUTADOR VERSÁTIL",
-  "domain": "Blade",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Lutador Versátil.png"
-},
-{
-  "name": "MASSACRE",
-  "domain": "Blade",
-  "level": 10,
-  "recoil": 3,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Massacre.png"
-},
-{
-  "name": "MONSTRO DE BATALHA",
-  "domain": "Blade",
-  "level": 10,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Monstro de Batalha.png"
-},
-{
-  "name": "NÃO FOI O SUFICIENTE",
-  "domain": "Blade",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Não Foi o Suficiente.png"
-},
-{
-  "name": "REDEMOINHO",
-  "domain": "Blade",
-  "level": 1,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Redemoinho.png"
-},
-{
-  "name": "SANGUE E GLÓRIA",
-  "domain": "Blade",
-  "level": 9,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Sangue e Glória.png"
-},
-{
-  "name": "TOCADO PELA LÂMINA",
-  "domain": "Blade",
-  "level": 7,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tocado pela Lâmina.png"
-},
-{
-  "name": "VANTAGEM DO CAMPEÃO",
-  "domain": "Blade",
-  "level": 5,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Vantagem do Campeão.png"
-},
-{
-  "name": "VITALIDADE",
-  "domain": "Blade",
-  "level": 5,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Vitalidade.png"
-},
-        {
-  "name": "AJUSTAR A REALIDADE",
-  "domain": "Arcana",
-  "level": 10,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Ajustar a Realidade.png"
-},
-{
-  "name": "ANDAR NA PAREDE",
-  "domain": "Arcana",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Andar na Parede.png"
-},
-{
-  "name": "ANDARILHO DO ABISMO",
-  "domain": "Arcana",
-  "level": 6,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Andarilho do Abismo.png"
-},
-{
-  "name": "APERTO DE CINZAS",
-  "domain": "Arcana",
-  "level": 2,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Aperto de Cinzas.png"
-},
-{
-  "name": "AURA CONFUSA",
-  "domain": "Arcana",
-  "level": 8,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Aura Confusa.png"
-},
-{
-  "name": "CONTRA-FEITIÇO",
-  "domain": "Arcana",
-  "level": 3,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Contra-Feitiço.png"
-},
-{
-  "name": "DESAPARECER",
-  "domain": "Arcana",
-  "level": 4,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Desaparecer.png"
-},
-{
-  "name": "EXPLOSÃO DE CAMUFLAGEM",
-  "domain": "Arcana",
-  "level": 7,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Explosão de Camuflagem.png"
-},
-{
-  "name": "EXPLOSÃO DE PRESERVAÇÃO",
-  "domain": "Arcana",
-  "level": 4,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Explosão de Preservação.png"
-},
-{
-  "name": "LIBERAR O CAOS",
-  "domain": "Arcana",
-  "level": 1,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Liberar o Caos.png"
-},
-{
-  "name": "OLHO FLUTUANTE",
-  "domain": "Arcana",
-  "level": 2,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Olho Flutuante.png"
-},
-{
-  "name": "PREMONIÇÃO",
-  "domain": "Arcana",
-  "level": 5,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Premonição.png"
-},
-{
-  "name": "PROJEÇÃO SENSORIAL",
-  "domain": "Arcana",
-  "level": 9,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Projeção Sensorial.png"
-},
-{
-  "name": "QUEDA DO CÉU",
-  "domain": "Arcana",
-  "level": 10,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Queda do Céu.png"
-},
-{
-  "name": "REFLEXO ARCANO",
-  "domain": "Arcana",
-  "level": 8,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Reflexo Arcano.png"
-},
-{
-  "name": "RELÂMPAGO EM CADEIA",
-  "domain": "Arcana",
-  "level": 5,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Relâmpago em Cadeia.png"
-},
-{
-  "name": "TALISMÃ RÚNICO",
-  "domain": "Arcana",
-  "level": 1,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Talismã Rúnico.png"
-},
-{
-  "name": "TELECINESE",
-  "domain": "Arcana",
-  "level": 6,
-  "recoil": 0,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Telecinese.png"
-},
-{
-  "name": "TERREMOTO",
-  "domain": "Arcana",
-  "level": 9,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Terremoto.png"
-},
-{
-  "name": "TOCADO PELA ARCANA",
-  "domain": "Arcana",
-  "level": 7,
-  "recoil": 2,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Tocado pela Arcana.png"
-},
-{
-  "name": "VOAR",
-  "domain": "Arcana",
-  "level": 3,
-  "recoil": 1,
-  "type": "Loadout",
-  "subtype": null,
-  "image": "Voar.png"
-}
+            },
+            {
+            "name": "Nightwalker-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Nightwalker",
+            "image": "Caminhante Noturno.png"
+            },
+            {
+            "name": "Nightwalker-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Nightwalker",
+            "image": "Caminhante Noturno(1).png"
+            },
+            {
+            "name": "Nightwalker-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Nightwalker",
+            "image": "Caminhante Noturno(2).png"
+            },
+            
+            {
+            "name": "Syndicate-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Syndicate",
+            "image": "Sindicato.png"
+            },
+            {
+            "name": "Syndicate-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Syndicate",
+            "image": "Sindicato(1).png"
+            },
+            {
+            "name": "Syndicate-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Syndicate",
+            "image": "Sindicato(2).png"
+            },
+            
+            {
+            "name": "Elemental Origin-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Elemental Origin",
+            "image": "Origem Elemental.png"
+            },
+            {
+            "name": "Elemental Origin-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Elemental Origin",
+            "image": "Origem Elemental(1).png"
+            },
+            {
+            "name": "Elemental Origin-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Elemental Origin",
+            "image": "Origem Elemental(2).png"
+            },
+            
+            {
+            "name": "Primal Origin-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Primal Origin",
+            "image": "Origem Primal.png"
+            },
+            {
+            "name": "Primal Origin-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Primal Origin",
+            "image": "Origem Primal(1).png"
+            },
+            {
+            "name": "Primal Origin-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Primal Origin",
+            "image": "Origem Primal(2).png"
+            },
+            
+            {
+            "name": "Warden of the Elements-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Warden of the Elements",
+            "image": "Guardião dos Elementos.png"
+            },
+            {
+            "name": "Warden of the Elements-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Warden of the Elements",
+            "image": "Guardião dos Elementos(1).png"
+            },
+            {
+            "name": "Warden of the Elements-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Warden of the Elements",
+            "image": "Guardião dos Elementos(2).png"
+            },
+            
+            {
+            "name": "Warden of Renewal-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Warden of Renewal",
+            "image": "Guardião da Renovação.png"
+            },
+            {
+            "name": "Warden of Renewal-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Warden of Renewal",
+            "image": "Guardião da Renovação(1).png"
+            },
+            {
+            "name": "Warden of Renewal-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Warden of Renewal",
+            "image": "Guardião da Renovação(2).png"
+            },
+            
+            {
+            "name": "Beastbound-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Beastbound",
+            "image": "Laço Bestial.png"
+            },
+            {
+            "name": "Beastbound-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Beastbound",
+            "image": "Laço Bestial(1).png"
+            },
+            {
+            "name": "Beastbound-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Beastbound",
+            "image": "Laço Bestial(2).png"
+            },
+            
+            {
+            "name": "Wayfinder-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Wayfinder",
+            "image": "Explorador.png"
+            },
+            {
+            "name": "Wayfinder-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Wayfinder",
+            "image": "Explorador(1).png"
+            },
+            {
+            "name": "Wayfinder-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Wayfinder",
+            "image": "Explorador(2).png"
+            },
+            
+            {
+            "name": "Wordsmith-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Wordsmith",
+            "image": "Artífice das Palavras.png"
+            },
+            {
+            "name": "Wordsmith-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Wordsmith",
+            "image": "Artífice das Palavras(1).png"
+            },
+            {
+            "name": "Wordsmith-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Wordsmith",
+            "image": "Artífice das Palavras(2).png"
+            },
+            {
+            "name": "School of Knowledge-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "School of Knowledge",
+            "image": "Escola do Conhecimento.png"
+            },
+            {
+            "name": "School of Knowledge-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "School of Knowledge",
+            "image": "Escola do Conhecimento(1).png"
+            },
+            {
+            "name": "School of Knowledge-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "School of Knowledge",
+            "image": "Escola do Conhecimento(2).png"
+            },
+            
+            {
+            "name": "School of War-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "School of War",
+            "image": "Escola da Guerra.png"
+            },
+            {
+            "name": "School of War-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "School of War",
+            "image": "Escola da Guerra(1).png"
+            },
+            {
+            "name": "School of War-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "School of War",
+            "image": "Escola da Guerra(2).png"
+            },
+            
+            {
+            "name": "Stalwart-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Stalwart",
+            "image": "robusto.png"
+            },
+            {
+            "name": "Stalwart-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Stalwart",
+            "image": "robusto(1).png"
+            },
+            {
+            "name": "Stalwart-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Stalwart",
+            "image": "robusto(2).png"
+            },
+            
+            {
+            "name": "Vengeance-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Vengeance",
+            "image": "Vingança.png"
+            },
+            {
+            "name": "Vengeance-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Vengeance",
+            "image": "Vingança(1).png"
+            },
+            {
+            "name": "Vengeance-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Vengeance",
+            "image": "Vingança(2).png"
+            },
+            
+            {
+            "name": "Winged Sentinel-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Winged Sentinel",
+            "image": "Sentinela Alado.png"
+            },
+            {
+            "name": "Winged Sentinel-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Winged Sentinel",
+            "image": "Sentinela Alado(1).png"
+            },
+            {
+            "name": "Winged Sentinel-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Winged Sentinel",
+            "image": "Sentinela Alado(2).png"
+            },
+            
+            {
+            "name": "Divine Wielder-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Divine Wielder",
+            "image": "portador divino.png"
+            },
+            {
+            "name": "Divine Wielder-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Divine Wielder",
+            "image": "portador divino(1).png"
+            },
+            {
+            "name": "Divine Wielder-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Divine Wielder",
+            "image": "portador divino(2).png"
+            },
+            
+            {
+            "name": "Call of the Brave-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Call of the Brave",
+            "image": "Chamada dos Bravos.png"
+            },
+            {
+            "name": "Call of the Brave-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Call of the Brave",
+            "image": "Chamada dos Bravos(1).png"
+            },
+            {
+            "name": "Call of the Brave-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Call of the Brave",
+            "image": "Chamada dos Bravos(2).png"
+            },
+            
+            {
+            "name": "Call of the Slayer-Foundation",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Foundation",
+            "subclass": "Call of the Slayer",
+            "image": "Chamada do Matador.png"
+            },
+            {
+            "name": "Call of the Slayer-Specialization",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Specialization",
+            "subclass": "Call of the Slayer",
+            "image": "Chamada do Matador(1).png"
+            },
+            {
+            "name": "Call of the Slayer-Maestry",
+            "level": 1,
+            "recoil": 0,
+            "type": "Subclasse",
+            "subtype": "Subclasse-Maestry",
+            "subclass": "Call of the Slayer",
+            "image": "Chamada do Matador(2).png"
+            },
+            {
+            "name": "APOIE-SE EM MIM",
+            "domain": "Valor",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Apoie-se em Mim.png"
+            },
+            {
+            "name": "ARMADURA INABALÁVEL",
+            "domain": "Valor",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Armadura Inabalável.png"
+            },
+            {
+            "name": "ARMADUREIRO",
+            "domain": "Valor",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Armadureiro.png"
+            },
+            {
+            "name": "DEIXE PASSAR",
+            "domain": "Valor",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Deixe Passar.png"
+            },
+            {
+            "name": "EMPURRÃO FORTE",
+            "domain": "Valor",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Empurrão Forte.png"
+            },
+            {
+            "name": "ERGA-SE",
+            "domain": "Valor",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Erga-se.png"
+            },
+            {
+            "name": "EU SOU SEU ESCUDO",
+            "domain": "Valor",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Eu Sou Seu Escudo.png"
+            },
+            {
+            "name": "GOLPE ESTIMULANTE",
+            "domain": "Valor",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Estimulante.png"
+            },
+            {
+            "name": "GOLPE NO CHÃO",
+            "domain": "Valor",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe no Chão.png"
+            },
+            {
+            "name": "INEVITÁVEL",
+            "domain": "Valor",
+            "level": 6,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Inevitável.png"
+            },
+            {
+            "name": "INQUEBRÁVEL",
+            "domain": "Valor",
+            "level": 10,
+            "recoil": 4,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Inquebrável.png"
+            },
+            {
+            "name": "INSPURAÇÃO CRÍTICA",
+            "domain": "Valor",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Inspuração Crítica.png"
+            },
+            {
+            "name": "LIDERAR PELO EXEMPLO",
+            "domain": "Valor",
+            "level": 9,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Liderar pelo Exemplo.png"
+            },
+            {
+            "name": "MANTENHA A POSIÇÃO",
+            "domain": "Valor",
+            "level": 9,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Mantenha a Posição.png"
+            },
+            {
+            "name": "PELE DURA",
+            "domain": "Valor",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Pele Dura.png"
+            },
+            {
+            "name": "PRESENÇA AUDAZ",
+            "domain": "Valor",
+            "level": 2,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Presença Audaz.png"
+            },
+            {
+            "name": "PROVOCAÇÃO",
+            "domain": "Valor",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Provocação.png"
+            },
+            {
+            "name": "QUEBRADOR CORPORAL",
+            "domain": "Valor",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Quebrador Corporal.png"
+            },
+            {
+            "name": "SURTO TOTAL",
+            "domain": "Valor",
+            "level": 8,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Surto Total.png"
+            },
+            {
+            "name": "TANQUE DE SUPORTE",
+            "domain": "Valor",
+            "level": 4,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tanque de Suporte.png"
+            },
+            {
+            "name": "TOCADO PELO VALOR",
+            "domain": "Valor",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pelo Valor.png"
+            },
+            {
+            "name": "ADIVINHAÇÃO",
+            "domain": "Splendor",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Adivinhação.png"
+            },
+            {
+            "name": "AURA AVASSALADORA",
+            "domain": "Splendor",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Aura Avassaladora.png"
+            },
+            {
+            "name": "AURA DE ESCUDO",
+            "domain": "Splendor",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Aura de Escudo.png"
+            },
+            {
+            "name": "FAROL BRILHANTE",
+            "domain": "Splendor",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Farol Brilhante.png"
+            },
+            {
+            "name": "GOLPE CURATIVO",
+            "domain": "Splendor",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Curativo.png"
+            },
+            {
+            "name": "GOLPE DIVINO",
+            "domain": "Splendor",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Divino.png"
+            },
+            {
+            "name": "GUARDIÃO DA VIDA",
+            "domain": "Splendor",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Guardião da Vida.png"
+            },
+            {
+            "name": "LUS OFUSCANTE",
+            "domain": "Splendor",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Lus Ofuscante.png"
+            },
+            {
+            "name": "MÃOS CURATIVAS",
+            "domain": "Splendor",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Mãos Curativas.png"
+            },
+            {
+            "name": "MOLDAR MATERIAL",
+            "domain": "Splendor",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Moldar Material.png"
+            },
+            {
+            "name": "PALAVRAS FINAIS",
+            "domain": "Splendor",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Palavras Finais.png"
+            },
+            {
+            "name": "RAIO DA SALVAÇÃO",
+            "domain": "Splendor",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Raio da Salvação.png"
+            },
+            {
+            "name": "REFORÇO",
+            "domain": "Splendor",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Reforço.png"
+            },
+            {
+            "name": "RESURREIÇÃO",
+            "domain": "Splendor",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Ressurreição.png"
+            },
+            {
+            "name": "RESTAURAÇÃO",
+            "domain": "Splendor",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Restauração.png"
+            },
+            {
+            "name": "REVIGORAMENTO",
+            "domain": "Splendor",
+            "level": 10,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Revigoramento.png"
+            },
+            {
+            "name": "SEGUNDO FÔLEGO",
+            "domain": "Splendor",
+            "level": 3,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Segundo Fôlego.png"
+            },
+            {
+            "name": "TOCADO DO SPLENDOR",
+            "domain": "Splendor",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado do Splendor.png"
+            },
+            {
+            "name": "TOQUE CURATIVO",
+            "domain": "Splendor",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Toque Curativo.png"
+            },
+            {
+            "name": "VOZ DA RAZÃO",
+            "domain": "Splendor",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Voz da Razão.png"
+            },
+            {
+            "name": "ZONA DE PROTEÇÃO",
+            "domain": "Splendor",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Zona de Proteção.png"
+            },
+            {
+            "name": "APERTO DA MORTE",
+            "domain": "Sage",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Aperto da Morte.png"
+            },
+            {
+            "name": "BARREIRA REJUVENESCEDORA",
+            "domain": "Sage",
+            "level": 8,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Barreira Rejuvenescadora.png"
+            },
+            {
+            "name": "CAMPO DE CURA",
+            "domain": "Sage",
+            "level": 4,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Campo de Cura.png"
+            },
+            {
+            "name": "CAULE IMPONENTE",
+            "domain": "Sage",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Caule Imponente.png"
+            },
+            {
+            "name": "COLETOR",
+            "domain": "Sage",
+            "level": 6,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Coletor.png"
+            },
+            {
+            "name": "CONJURADOR ENXAME",
+            "domain": "Sage",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Conjurador Enxame.png"
+            },
+            {
+            "name": "DOMÍNIO DAS PLANTAS",
+            "domain": "Sage",
+            "level": 9,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Domínio das Plantas.png"
+            },
+            {
+            "name": "EMARANHADO CRUEL",
+            "domain": "Sage",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Emaranhado Cruel.png"
+            },
+            {
+            "name": "FAMILIAR NATURAL",
+            "domain": "Sage",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Familiar Natural.png"
+            },
+            {
+            "name": "FORÇA DA NATUREZA",
+            "domain": "Sage",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Força da Natureza.png"
+            },
+            {
+            "name": "FOREST SPRITES",
+            "domain": "Sage",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Forest Sprites.png"
+            },
+            {
+            "name": "FORTALEZA SELVAGEM",
+            "domain": "Sage",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Fortaleza Selvagem.png"
+            },
+            {
+            "name": "LÍNGUA DA NATUREZA",
+            "domain": "Sage",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Língua da Natureza.png"
+            },
+            {
+            "name": "OMNTARIAS",
+            "domain": "Sage",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Omntarias.png"
+            },
+            {
+            "name": "PELE ESPINHOSA",
+            "domain": "Sage",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Pele Espinhosa.png"
+            },
+            {
+            "name": "PORJÉTIL CORROSIVO",
+            "domain": "Sage",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Porjétil Corrosivo.png"
+            },
+            {
+            "name": "RASTREADOR HABILIDOSO",
+            "domain": "Sage",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Rastreador Habilidoso.png"
+            },
+            {
+            "name": "SURTO SELVAGEM",
+            "domain": "Sage",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Surto Selvagem.png"
+            },
+            {
+            "name": "TEMPESTADE",
+            "domain": "Sage",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tempestade.png"
+            },
+            {
+            "name": "TEMPLO DAS SELVAS",
+            "domain": "Sage",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Templo das Selvas.png"
+            },
+            {
+            "name": "TOCADO PELO SABER",
+            "domain": "Sage",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pelo Saber.png"
+            },
+            {
+            "name": "ABRIR E PUXAR",
+            "domain": "Midnight",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Abrir e Puxar.png"
+            },
+            {
+            "name": "CAÇADOR DAS SOMBRAS",
+            "domain": "Midnight",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Caçador das Sombras.png"
+            },
+            {
+            "name": "CARGA MÁGICA",
+            "domain": "Midnight",
+            "level": 8,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Carga Mágica.png"
+            },
+            {
+            "name": "CHUVA DE LÂMINAS",
+            "domain": "Midnight",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Chuva de Lâminas.png"
+            },
+            {
+            "name": "DISFARCE EM MASSA",
+            "domain": "Midnight",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Disfarce em Massa.png"
+            },
+            {
+            "name": "DISFARCE INCRÍVEL",
+            "domain": "Midnight",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Disfarce Incrível.png"
+            },
+            {
+            "name": "ECLIPSE",
+            "domain": "Midnight",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Eclipse.png"
+            },
+            {
+            "name": "ESPECTRO DA ESCURIDÃO",
+            "domain": "Midnight",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Espectro da Escuridão.png"
+            },
+            {
+            "name": "ESPÍRITO DA MEIA-NOITE",
+            "domain": "Midnight",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Espírito da Meia-noite.png"
+            },
+            {
+            "name": "ESQUIVA DESAPARECENTE",
+            "domain": "Midnight",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Esquiva Desaparecente.png"
+            },
+            {
+            "name": "ESTRANGULAMENTO",
+            "domain": "Midnight",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Estrangulamento.png"
+            },
+            {
+            "name": "EXPERT EM FURTIVIDADE",
+            "domain": "Midnight",
+            "level": 4,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Expert em Furtividade.png"
+            },
+            {
+            "name": "GLIFO DO CREPÚSCULO",
+            "domain": "Midnight",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Glifo do Crepúsculo.png"
+            },
+            {
+            "name": "RETIRADA FANTASMA",
+            "domain": "Midnight",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Retirada Fantasma.png"
+            },
+            {
+            "name": "SILÊNCIO",
+            "domain": "Midnight",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Silêncio.png"
+            },
+            {
+            "name": "SUSSUROS SOMBRIOS",
+            "domain": "Midnight",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Sussurros Sombrios.png"
+            },
+            {
+            "name": "TERROR NOTURNO",
+            "domain": "Midnight",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Terror Noturno.png"
+            },
+            {
+            "name": "TOCADO PELA MEIA-NOITE",
+            "domain": "Midnight",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pela Meia-noite.png"
+            },
+            {
+            "name": "TRIBUTO DO CREPÚSCULO",
+            "domain": "Midnight",
+            "level": 9,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tributo do Crepúsculo.png"
+            },
+            {
+            "name": "VÉU DA NOITE",
+            "domain": "Midnight",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Véu da Noite.png"
+            },
+            {
+            "name": "VINCULAR SOMBRAS",
+            "domain": "Midnight",
+            "level": 2,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Vincular Sombras.png"
+            },
+            {
+            "name": "BRILHO HIPNÓTICO",
+            "domain": "Grace",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Brilho Hipnótico.png"
+            },
+            {
+            "name": "CARISMA INFINITO",
+            "domain": "Grace",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Carisma Infinito.png"
+            },
+            {
+            "name": "DISCURSO ACALMANTE",
+            "domain": "Grace",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Discurso Acalmante.png"
+            },
+            {
+            "name": "ENCANTAR",
+            "domain": "Grace",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Encantar.png"
+            },
+            {
+            "name": "ENCRENQUEIRO",
+            "domain": "Grace",
+            "level": 2,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Encrenqueiro.png"
+            },
+            {
+            "name": "ENFEITIÇAR EM MASSA",
+            "domain": "Grace",
+            "level": 8,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Enfeitiçar em Massa.png"
+            },
+            {
+            "name": "ENGANADOR HÁBIL",
+            "domain": "Grace",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Enganador Hábil.png"
+            },
+            {
+            "name": "IMITADOR",
+            "domain": "Grace",
+            "level": 9,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Imitador.png"
+            },
+            {
+            "name": "INVISIBILIDADE",
+            "domain": "Grace",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Invisibilidade.png"
+            },
+            {
+            "name": "MERGULHADOR DE PENSAMENTOS",
+            "domain": "Grace",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Mergulhador de Pensamentos.png"
+            },
+            {
+            "name": "MESTRE DO OFÍCIO",
+            "domain": "Grace",
+            "level": 9,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Mestre do Ofício.png"
+            },
+            {
+            "name": "NÃO CONTE MENTIRAS",
+            "domain": "Grace",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Não Conte Mentiras.png"
+            },
+            {
+            "name": "NOTÓRIO",
+            "domain": "Grace",
+            "level": 10,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Notório.png"
+            },
+            {
+            "name": "NUNCA OFUSCADO",
+            "domain": "Grace",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Nunca Ofuscado.png"
+            },
+            {
+            "name": "PALAVRAS INSPIRADORAS",
+            "domain": "Grace",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Palavras Inspiradoras.png"
+            },
+            {
+            "name": "PELOS SEUS OLHOS",
+            "domain": "Grace",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Pelos Seus Olhos.png"
+            },
+            {
+            "name": "PROJEÇÃO ASTRAL",
+            "domain": "Grace",
+            "level": 8,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Projeção Astral.png"
+            },
+            {
+            "name": "REPRISE",
+            "domain": "Grace",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Reprise.png"
+            },
+            {
+            "name": "SHARE THE BURDEN",
+            "domain": "Grace",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Share the Burden.png"
+            },
+            {
+            "name": "TOCADO PELA GRAÇA",
+            "domain": "Grace",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pela Graça.png"
+            },
+            {
+            "name": "WORDS OF DISCORD",
+            "domain": "Grace",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Words of Discord.png"
+            },
+            {
+            "name": "BANIR",
+            "domain": "Codex",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Banir.png"
+            },
+            {
+            "name": "LIVRO DE AVA",
+            "domain": "Codex",
+            "level": 1,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Ava.png"
+            },
+            {
+            "name": "LIVRO DE EXOTA",
+            "domain": "Codex",
+            "level": 4,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Exota.png"
+            },
+            {
+            "name": "LIVRO DE GRYNN",
+            "domain": "Codex",
+            "level": 4,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Grynn.png"
+            },
+            {
+            "name": "LIVRO DE HOMET",
+            "domain": "Codex",
+            "level": 7,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Homet.png"
+            },
+            {
+            "name": "LIVRO DE ILLIAT",
+            "domain": "Codex",
+            "level": 1,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Illiat.png"
+            },
+            {
+            "name": "LIVRO DE KORVAX",
+            "domain": "Codex",
+            "level": 3,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Korvax.png"
+            },
+            {
+            "name": "LIVRO DE NORAI",
+            "domain": "Codex",
+            "level": 3,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Norai.png"
+            },
+            {
+            "name": "LIVRO DE SITIL",
+            "domain": "Codex",
+            "level": 2,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Sitil.png"
+            },
+            {
+            "name": "LIVRO DE TYFAR",
+            "domain": "Codex",
+            "level": 1,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Tyfar.png"
+            },
+            {
+            "name": "LIVRO DE VAGRAS",
+            "domain": "Codex",
+            "level": 2,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Vagras.png"
+            },
+            {
+            "name": "LIVRO DE VYOLA",
+            "domain": "Codex",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Vyola.png"
+            },
+            {
+            "name": "LIVRO DE YARROW",
+            "domain": "Codex",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro de Yarrow.png"
+            },
+            {
+            "name": "LIVRO DO RONIN",
+            "domain": "Codex",
+            "level": 9,
+            "recoil": 4,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Livro do Ronin.png"
+            },
+            {
+            "name": "MANIFESTAR MURALHA",
+            "domain": "Codex",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Manifestar Muralha.png"
+            },
+            {
+            "name": "ONDA DE DESINTEGRAÇÃO",
+            "domain": "Codex",
+            "level": 9,
+            "recoil": 4,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Onda de Desintegração.png"
+            },
+            {
+            "name": "REFÚGIO SEGURO",
+            "domain": "Codex",
+            "level": 8,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Refúgio Seguro.png"
+            },
+            {
+            "name": "SÍMBOLO DA RETALIAÇÃO",
+            "domain": "Codex",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Símbolo da Retaliação.png"
+            },
+            {
+            "name": "TELEPORTE",
+            "domain": "Codex",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Teleporte.png"
+            },
+            {
+            "name": "TOCADO PELO CÓDICE",
+            "domain": "Codex",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pelo Códice.png"
+            },
+            {
+            "name": "UNIÃO TRANSCENDENTE",
+            "domain": "Codex",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "União Transcendente.png"
+            },
+            {
+            "name": "ABORDAGEM ESTRATÉGICA",
+            "domain": "Bone",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Abordagem Estratégica.png"
+            },
+            {
+            "name": "CONHEÇA TEU INIMIGO",
+            "domain": "Bone",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Conheça Teu Inimigo.png"
+            },
+            {
+            "name": "CORRIDA DA MORTE",
+            "domain": "Bone",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Corrida da Morte.png"
+            },
+            {
+            "name": "DOMINAR",
+            "domain": "Bone",
+            "level": 8,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Dominar.png"
+            },
+            {
+            "name": "EU VI CHEGANDO",
+            "domain": "Bone",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Eu Vi Chegando.png"
+            },
+            {
+            "name": "FEROCIDADE",
+            "domain": "Bone",
+            "level": 2,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Ferocidade.png"
+            },
+            {
+            "name": "GOLPE ARRASADOR",
+            "domain": "Bone",
+            "level": 8,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Arrasador.png"
+            },
+            {
+            "name": "GOLPE ASSINATURA",
+            "domain": "Bone",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Assinatura.png"
+            },
+            {
+            "name": "GOLPE ESTILHAÇANTE",
+            "domain": "Bone",
+            "level": 9,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Estilhaçante.png"
+            },
+            {
+            "name": "IMPULSO",
+            "domain": "Bone",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Impulso.png"
+            },
+            {
+            "name": "INTOCÁVEL",
+            "domain": "Bone",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Intocável.png"
+            },
+            {
+            "name": "MANOBRAS ÁGEIS",
+            "domain": "Bone",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Manobras Ágeis.png"
+            },
+            {
+            "name": "NA BEIRA",
+            "domain": "Bone",
+            "level": 9,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Na Beira.png"
+            },
+            {
+            "name": "PASSO ÁGIL",
+            "domain": "Bone",
+            "level": 10,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Passo Ágil.png"
+            },
+            {
+            "name": "PRECISÃO CRUEL",
+            "domain": "Bone",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Precisão Cruel.png"
+            },
+            {
+            "name": "PREPARAR",
+            "domain": "Bone",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Preparar.png"
+            },
+            {
+            "name": "RECUPERAÇÃO",
+            "domain": "Bone",
+            "level": 6,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Recuperação.png"
+            },
+            {
+            "name": "REDIRECIONAR",
+            "domain": "Bone",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Redirecionar.png"
+            },
+            {
+            "name": "RESPOSTA RÁPIDA",
+            "domain": "Bone",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Resposta Rápida.png"
+            },
+            {
+            "name": "TÁTICO",
+            "domain": "Bone",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tático.png"
+            },
+            {
+            "name": "TOCADO PELO OSSO",
+            "domain": "Bone",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pelo Osso.png"
+            },
+            {
+            "name": "ARMADURA FORTIFICADA",
+            "domain": "Blade",
+            "level": 4,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Armadura Fortificada.png"
+            },
+            {
+            "name": "CONFUSÃO",
+            "domain": "Blade",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Confusão.png"
+            },
+            {
+            "name": "ENDURECIDO PELA BATALHA",
+            "domain": "Blade",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Endurecido pela Batalha.png"
+            },
+            {
+            "name": "FOCO MORTAL",
+            "domain": "Blade",
+            "level": 4,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Foco Mortal.png"
+            },
+            {
+            "name": "FRENESI",
+            "domain": "Blade",
+            "level": 8,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Frenesi.png"
+            },
+            {
+            "name": "FÚRIA CRESCENTE",
+            "domain": "Blade",
+            "level": 6,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Fúria Crescente.png"
+            },
+            {
+            "name": "GOLPE CEIFADOR",
+            "domain": "Blade",
+            "level": 9,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Ceifador.png"
+            },
+            {
+            "name": "GOLPE RASO",
+            "domain": "Blade",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Golpe Raso.png"
+            },
+            {
+            "name": "GRITO DE BATALHA",
+            "domain": "Blade",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Grito de Batalha.png"
+            },
+            {
+            "name": "IMPRUDENTE",
+            "domain": "Blade",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Imprudente.png"
+            },
+            {
+            "name": "LAÇO DE SOLDADO",
+            "domain": "Blade",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Laço de Soldado.png"
+            },
+            {
+            "name": "LEVANTAR-SE",
+            "domain": "Blade",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Levantar-se.png"
+            },
+            {
+            "name": "LUTADOR VERSÁTIL",
+            "domain": "Blade",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Lutador Versátil.png"
+            },
+            {
+            "name": "MASSACRE",
+            "domain": "Blade",
+            "level": 10,
+            "recoil": 3,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Massacre.png"
+            },
+            {
+            "name": "MONSTRO DE BATALHA",
+            "domain": "Blade",
+            "level": 10,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Monstro de Batalha.png"
+            },
+            {
+            "name": "NÃO FOI O SUFICIENTE",
+            "domain": "Blade",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Não Foi o Suficiente.png"
+            },
+            {
+            "name": "REDEMOINHO",
+            "domain": "Blade",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Redemoinho.png"
+            },
+            {
+            "name": "SANGUE E GLÓRIA",
+            "domain": "Blade",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Sangue e Glória.png"
+            },
+            {
+            "name": "TOCADO PELA LÂMINA",
+            "domain": "Blade",
+            "level": 7,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pela Lâmina.png"
+            },
+            {
+            "name": "VANTAGEM DO CAMPEÃO",
+            "domain": "Blade",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Vantagem do Campeão.png"
+            },
+            {
+            "name": "VITALIDADE",
+            "domain": "Blade",
+            "level": 5,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Vitalidade.png"
+            },
+            {
+            "name": "AJUSTAR A REALIDADE",
+            "domain": "Arcana",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Ajustar a Realidade.png"
+            },
+            {
+            "name": "ANDAR NA PAREDE",
+            "domain": "Arcana",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Andar na Parede.png"
+            },
+            {
+            "name": "ANDARILHO DO ABISMO",
+            "domain": "Arcana",
+            "level": 6,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Andarilho do Abismo.png"
+            },
+            {
+            "name": "APERTO DE CINZAS",
+            "domain": "Arcana",
+            "level": 2,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Aperto de Cinzas.png"
+            },
+            {
+            "name": "AURA CONFUSA",
+            "domain": "Arcana",
+            "level": 8,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Aura Confusa.png"
+            },
+            {
+            "name": "CONTRA-FEITIÇO",
+            "domain": "Arcana",
+            "level": 3,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Contra-Feitiço.png"
+            },
+            {
+            "name": "DESAPARECER",
+            "domain": "Arcana",
+            "level": 4,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Desaparecer.png"
+            },
+            {
+            "name": "EXPLOSÃO DE CAMUFLAGEM",
+            "domain": "Arcana",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Explosão de Camuflagem.png"
+            },
+            {
+            "name": "EXPLOSÃO DE PRESERVAÇÃO",
+            "domain": "Arcana",
+            "level": 4,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Explosão de Preservação.png"
+            },
+            {
+            "name": "LIBERAR O CAOS",
+            "domain": "Arcana",
+            "level": 1,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Liberar o Caos.png"
+            },
+            {
+            "name": "OLHO FLUTUANTE",
+            "domain": "Arcana",
+            "level": 2,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Olho Flutuante.png"
+            },
+            {
+            "name": "PREMONIÇÃO",
+            "domain": "Arcana",
+            "level": 5,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Premonição.png"
+            },
+            {
+            "name": "PROJEÇÃO SENSORIAL",
+            "domain": "Arcana",
+            "level": 9,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Projeção Sensorial.png"
+            },
+            {
+            "name": "QUEDA DO CÉU",
+            "domain": "Arcana",
+            "level": 10,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Queda do Céu.png"
+            },
+            {
+            "name": "REFLEXO ARCANO",
+            "domain": "Arcana",
+            "level": 8,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Reflexo Arcano.png"
+            },
+            {
+            "name": "RELÂMPAGO EM CADEIA",
+            "domain": "Arcana",
+            "level": 5,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Relâmpago em Cadeia.png"
+            },
+            {
+            "name": "TALISMÃ RÚNICO",
+            "domain": "Arcana",
+            "level": 1,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Talismã Rúnico.png"
+            },
+            {
+            "name": "TELECINESE",
+            "domain": "Arcana",
+            "level": 6,
+            "recoil": 0,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Telecinese.png"
+            },
+            {
+            "name": "TERREMOTO",
+            "domain": "Arcana",
+            "level": 9,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Terremoto.png"
+            },
+            {
+            "name": "TOCADO PELA ARCANA",
+            "domain": "Arcana",
+            "level": 7,
+            "recoil": 2,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Tocado pela Arcana.png"
+            },
+            {
+            "name": "VOAR",
+            "domain": "Arcana",
+            "level": 3,
+            "recoil": 1,
+            "type": "Loadout",
+            "subtype": null,
+            "image": "Voar.png"
+            }
+            
