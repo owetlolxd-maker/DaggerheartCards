@@ -1,6 +1,6 @@
-// =====================
+// ====================
 // CARREGAR DADOS
-// =====================
+// ====================
 let data;
 fetch('data.json')
     .then(response => response.json())
@@ -375,3 +375,4 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
+
