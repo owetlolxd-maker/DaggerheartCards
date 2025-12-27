@@ -19,7 +19,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "anão.png"
+            "image": "Anão.png"
         },
         {
             "name": "Clank",
@@ -2425,4 +2425,5 @@
     "image": "VOAR.png"
     }
     ]
+
 }
