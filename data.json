@@ -27,7 +27,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "Clank.png"
+            "image": "clank.png"
         },
         {
             "name": "Drakona",
@@ -35,7 +35,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "Drakona.png"
+            "image": "drakona.png"
         },
         {
             "name": "Elfo",
@@ -43,7 +43,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "Elfo.png"
+            "image": "elfo.png"
         },
         {
             "name": "Fada",
@@ -51,7 +51,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "Fada.png"
+            "image": "fada.png"
         },
         {
             "name": "Firbolg",
@@ -83,7 +83,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "Gigante.png"
+            "image": "gigante.png"
         },
         {
             "name": "Goblin",
@@ -1540,7 +1540,7 @@
     "recoil": 0,
     "type": "Loadout",
     "subtype": null,
-    "image": "ENGANADOR HÁBIL.png"
+    "image": "enganador hábil.png"
     },
     {
     "name": "IMITADOR",
@@ -2427,6 +2427,7 @@
     ]
 
 }
+
 
 
 
