@@ -823,13 +823,13 @@
         "image": "Inquebrável.png"
         },
         {
-        "name": "INSPURAÇÃO CRÍTICA",
+        "name": "INSPIRAÇÃO CRÍTICA",
         "domain": "Valor",
         "level": 3,
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Inspuração Crítica.png"
+        "image": "Inspiração Crítica.png"
         },
         {
         "name": "LIDERAR PELO EXEMPLO",
@@ -847,7 +847,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Mantenha a Posição.png"
+        "image": "Mantenha a posição.png"
         },
         {
         "name": "PELE DURA",
@@ -976,13 +976,13 @@
         "image": "Guardião da Vida.png"
         },
         {
-        "name": "LUS OFUSCANTE",
+        "name": "LUZ OFUSCANTE",
         "domain": "Splendor",
         "level": 8,
         "recoil": 2,
         "type": "Loadout",
         "subtype": null,
-        "image": "Lus Ofuscante.png"
+        "image": "Luz Ofuscante.png"
         },
         {
         "name": "MÃOS CURATIVAS",
@@ -1072,7 +1072,7 @@
         "recoil": 2,
         "type": "Loadout",
         "subtype": null,
-        "image": "Tocado do Splendor.png"
+        "image": "Tocado do Esplendor.png"
         },
         {
         "name": "TOQUE CURATIVO",
@@ -1117,7 +1117,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Barreira Rejuvenescadora.png"
+        "image": "Barreira Rejuvenescedora.png"
         },
         {
         "name": "CAMPO DE CURA",
@@ -1153,7 +1153,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Conjurador Enxame.png"
+        "image": "Conjurar Enxame.png"
         },
         {
         "name": "DOMÍNIO DAS PLANTAS",
@@ -1219,13 +1219,13 @@
         "image": "Língua da Natureza.png"
         },
         {
-        "name": "OMNTARIAS",
+        "name": "MONTARIA CONJURADAS",
         "domain": "Sage",
         "level": 6,
         "recoil": 0,
         "type": "Loadout",
         "subtype": null,
-        "image": "Omntarias.png"
+        "image": "Montarias Conjuradas.png"
         },
         {
         "name": "PELE ESPINHOSA",
@@ -1237,13 +1237,13 @@
         "image": "Pele Espinhosa.png"
         },
         {
-        "name": "PORJÉTIL CORROSIVO",
+        "name": "PROJÉTIL CORROSIVO",
         "domain": "Sage",
         "level": 3,
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Porjétil Corrosivo.png"
+        "image": "Projétil Corrosivo.png"
         },
         {
         "name": "RASTREADOR HABILIDOSO",
@@ -1252,7 +1252,7 @@
         "recoil": 0,
         "type": "Loadout",
         "subtype": null,
-        "image": "Rastreador Habilidoso.png"
+        "image": "Rastreador habilidoso.png"
         },
         {
         "name": "SURTO SELVAGEM",
@@ -1288,7 +1288,7 @@
         "recoil": 2,
         "type": "Loadout",
         "subtype": null,
-        "image": "Tocado pelo Saber.png"
+        "image": "Tocado pelo saber.png"
         },
         {
         "name": "ABRIR E PUXAR",
@@ -1369,7 +1369,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Espírito da Meia-noite.png"
+        "image": "Espírito da Meia-Noite.png"
         },
         {
         "name": "ESQUIVA DESAPARECENTE",
@@ -1450,7 +1450,7 @@
         "recoil": 2,
         "type": "Loadout",
         "subtype": null,
-        "image": "Tocado pela Meia-noite.png"
+        "image": "Tocado pela Meia-Noite.png"
         },
         {
         "name": "TRIBUTO DO CREPÚSCULO",
@@ -1540,7 +1540,7 @@
         "recoil": 0,
         "type": "Loadout",
         "subtype": null,
-        "image": "Enganador Hábil.png"
+        "image": "Enganador hábil.png"
         },
         {
         "name": "IMITADOR",
@@ -1891,7 +1891,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Dominar.png"
+        "image": "DOMINAR.png"
         },
         {
         "name": "EU VI CHEGANDO",
@@ -2107,7 +2107,7 @@
         "recoil": 3,
         "type": "Loadout",
         "subtype": null,
-        "image": "Golpe Ceifador.png"
+        "image": "Golpe do Ceifador.png"
         },
         {
         "name": "GOLPE RASO",
@@ -2188,7 +2188,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Não Foi o Suficiente.png"
+        "image": "Não foi suficiente.png"
         },
         {
         "name": "REDEMOINHO",
@@ -2233,7 +2233,7 @@
         "recoil": 0,
         "type": "Loadout",
         "subtype": null,
-        "image": "Vitalidade.png"
+        "image": "VITALIDADE.png"
         },
         {
         "name": "AJUSTAR A REALIDADE",
@@ -2296,7 +2296,7 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Desaparecer.png"
+        "image": "DESAPARECER.png"
         },
         {
         "name": "EXPLOSÃO DE CAMUFLAGEM",
@@ -2314,7 +2314,7 @@
         "recoil": 2,
         "type": "Loadout",
         "subtype": null,
-        "image": "Explosão de Preservação.png"
+        "image": "Explosão dE Preservação.png"
         },
         {
         "name": "LIBERAR O CAOS",
@@ -2332,7 +2332,7 @@
         "recoil": 0,
         "type": "Loadout",
         "subtype": null,
-        "image": "Olho Flutuante.png"
+        "image": "OLHO FLUTUANTE.png"
         },
         {
         "name": "PREMONIÇÃO",
@@ -2422,7 +2422,8 @@
         "recoil": 1,
         "type": "Loadout",
         "subtype": null,
-        "image": "Voar.png"
+        "image": "VOAR.png"
         }
     ]
 }
+
