@@ -67,7 +67,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Raça",
-            "image": "fungril.png"
+            "image": "Fungril.png"
         },
         {
             "name": "Galapa",
@@ -155,7 +155,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "highborne.png"
+            "image": "Highborne.png"
         },
         {
             "name": "Loreborne",
@@ -163,7 +163,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "loreborne.png"
+            "image": "Loreborne.png"
         },
         {
             "name": "Orderborne",
@@ -171,7 +171,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "orderborne.png"
+            "image": "Orderborne.png"
         },
         {
             "name": "Ridgeborne",
@@ -179,7 +179,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "ridgeborne.png"
+            "image": "Ridgeborne.png"
         },
         {
             "name": "Seaborne",
@@ -187,7 +187,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "seaborne.png"
+            "image": "Seaborne.png"
         },
         {
             "name": "Slyborne",
@@ -195,7 +195,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "slyborne.png"
+            "image": "Slyborne.png"
         },
         {
             "name": "Underborne",
@@ -203,7 +203,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "underborne.png"
+            "image": "Underborne.png"
         },
         {
             "name": "Wanderborne",
@@ -211,7 +211,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "wanderborne.png"
+            "image": "Wanderborne.png"
         },
         {
             "name": "Wildborne",
@@ -219,7 +219,7 @@
             "recoil": 0,
             "type": "Ancestralidade",
             "subtype": "Ancestralidade-Comunidade",
-            "image": "wildborne.png"
+            "image": "Wildborne.png"
         },
         
         {
@@ -2427,5 +2427,6 @@
     ]
 
 }
+
 
 
