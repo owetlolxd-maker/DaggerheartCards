@@ -5,89 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prancheta de Jogador - RPG</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Prancheta do Jogador</h1>
-            <p>Gerencie suas cartas em um mundo de fantasia!</p>
-        </header>
-        
-        <div class="board">
-            <!-- Opções Acima da Prancheta -->
-            <section class="options">
-                <div class="option-group">
-                    <label>Domínio Primário:</label>
-                    <select id="primary-domain">
-                        <option value="">Selecione</option>
-                    </select>
-                    <div id="primary-domain-list" class="domain-list"></div>
-                </div>
-                <div class="option-group">
-                    <label>Domínio Secundário:</label>
-                    <select id="secondary-domain">
-                        <option value="">Selecione</option>
-                    </select>
-                    <div id="secondary-domain-list" class="domain-list"></div>
-                </div>
-            </section>
+    <!-- Seção de Login/Logout -->
+    <div id="auth-section">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button id="login-btn">Login / Sign Up</button>
+        <button id="logout-btn" style="display: none;">Logout</button>
+        <p id="auth-message"></p>
+    </div>
+
+    <!-- Prancheta (oculta se não logado) -->
+    <div id="main-content" style="display: none;">
+        <div class="container">
+            <header>
+                <h1>Prancheta do Jogador</h1>
+                <p>Gerencie suas cartas em um mundo de fantasia!</p>
+            </header>
             
-            <!-- Seleção de Classe e Subclasse -->
-            <section class="options">
-                <div class="option-group">
-                    <label>Classe:</label>
-                    <select id="class-select">
-                        <option value="">Selecione</option>
-                    </select>
+            <div class="board">
+                <!-- Opções Acima da Prancheta -->
+                <section class="options">
+                    <div class="option-group">
+                        <label>Domínio Primário:</label>
+                        <select id="primary-domain">
+                            <option value="">Selecione</option>
+                        </select>
+                        <div id="primary-domain-list" class="domain-list"></div>
+                    </div>
+                    <div class="option-group">
+                        <label>Domínio Secundário:</label>
+                        <select id="secondary-domain">
+                            <option value="">Selecione</option>
+                        </select>
+                        <div id="secondary-domain-list" class="domain-list"></div>
+                    </div>
+                </section>
+                
+                <!-- Seleção de Classe e Subclasse -->
+                <section class="options">
+                    <div class="option-group">
+                        <label>Classe:</label>
+                        <select id="class-select">
+                            <option value="">Selecione</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Subclasse:</label>
+                        <select id="subclass-select">
+                            <option value="">Selecione</option>
+                        </select>
+                    </div>
+                </section>
+                
+                <!-- Campo de Nível -->
+                <section class="options">
+                    <label>Nível do Personagem:</label>
+                    <input type="number" id="level" min="1" max="20" value="1">
+                </section>
+                
+                <!-- Multiclasse -->
+                <section class="options">
+                    <label>Multiclasse:</label>
+                    <input type="number" id="multiclass" min="0" max="10" value="0">
+                    <div id="extra-domains"></div>
+                </section>
+                
+                <!-- Prancheta com Blocos -->
+                <div class="prancheta">
+                    <div class="block" id="ancestralidade-block">
+                        <h4>Ancestralidade</h4>
+                        <p>Slot 1: Raça | Slot 2: Comunidade</p>
+                        <div class="slots" id="ancestralidade-slots"></div>
+                    </div>
+                    <div class="block" id="subclasse-block">
+                        <h4>Subclasse</h4>
+                        <p>Slot 1: Foundation | Slot 2: Specialization | Slot 3: Maestry</p>
+                        <div class="slots" id="subclasse-slots"></div>
+                    </div>
+                    <div class="block" id="loadouts-block">
+                        <h4>Loadouts</h4>
+                        <p>Cartas com domínios selecionados</p>
+                        <div class="slots" id="loadouts-slots"></div>
+                    </div>
+                    <div class="block" id="cofre-block">
+                        <h4>Cofre</h4>
+                        <p>Cartas com domínios selecionados</p>
+                        <div class="slots" id="cofre-slots"></div>
+                    </div>
                 </div>
-                <div class="option-group">
-                    <label>Subclasse:</label>
-                    <select id="subclass-select">
-                        <option value="">Selecione</option>
-                    </select>
-                </div>
-            </section>
-            
-            <!-- Campo de Nível -->
-            <section class="options">
-                <label>Nível do Personagem:</label>
-                <input type="number" id="level" min="1" max="20" value="1">
-            </section>
-            
-            <!-- Multiclasse -->
-            <section class="options">
-                <label>Multiclasse:</label>
-                <input type="number" id="multiclass" min="0" max="10" value="0">
-                <div id="extra-domains"></div>
-            </section>
-            
-            <!-- Prancheta com Blocos -->
-            <div class="prancheta">
-                <div class="block" id="ancestralidade-block">
-                    <h4>Ancestralidade</h4>
-                    <p>Slot 1: Raça | Slot 2: Comunidade</p>
-                    <div class="slots" id="ancestralidade-slots"></div>
-                </div>
-                <div class="block" id="subclasse-block">
-                    <h4>Subclasse</h4>
-                    <p>Slot 1: Foundation | Slot 2: Specialization | Slot 3: Maestry</p>
-                    <div class="slots" id="subclasse-slots"></div>
-                </div>
-                <div class="block" id="loadouts-block">
-                    <h4>Loadouts</h4>
-                    <p>Cartas com domínios selecionados</p>
-                    <div class="slots" id="loadouts-slots"></div>
-                </div>
-                <div class="block" id="cofre-block">
-                    <h4>Cofre</h4>
-                    <p>Cartas com domínios selecionados</p>
-                    <div class="slots" id="cofre-slots"></div>
-                </div>
+                
+                <!-- Exibição de Recuo -->
+                <div id="recoil-display" class="recoil-display"></div>
+                <button id="save-board">Salvar Prancheta</button>
             </div>
-            
-            <!-- Exibição de Recuo -->
-            <div id="recoil-display" class="recoil-display"></div>
-            <button id="save-board">Salvar Prancheta</button>
         </div>
     </div>
 
