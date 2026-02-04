@@ -1,8 +1,6 @@
-// ====================
-// SUPABASE CONFIG
-// ====================
-        const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs';
+        const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co'
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs'
+
         const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey)
 
         async function signUp(email, password) {
@@ -22,6 +20,57 @@
             if (error) alert(error.message)
         }
 
+        async function logout() {
+            await saveFicha(); // Salvar ficha atual antes de sair
+            await supabaseClient.auth.signOut()
+            location.reload()
+        }
+
+        async function getUser() {
+            const { data } = await supabaseClient.auth.getUser()
+            return data.user
+        }
+
+        async function saveSheet(sheetName, trackersData) {
+            const user = await getUser()
+            if (!user) return alert('Faça login primeiro')
+
+            const { error } = await supabaseClient
+                .from('sheets')
+                .insert({
+                    user_id: user.id,
+                    name: sheetName,
+                    data: trackersData
+                })
+
+            if (error) {
+                console.error(error)
+                alert('Erro ao salvar ficha')
+            }
+        }
+
+        async function updateSheet(sheetId, trackersData) {
+            const { error } = await supabaseClient
+                .from('sheets')
+                .update({ data: trackersData })
+                .eq('id', sheetId)
+
+            if (error) console.error(error)
+        }
+
+        async function loadSheets() {
+            const { data, error } = await supabaseClient
+                .from('sheets')
+                .select('*')
+                .order('created_at', { ascending: false })
+
+            if (error) {
+                console.error(error)
+                return []
+            }
+
+            return data
+        }
 // ====================
 // CARREGAR DADOS
 // ====================
@@ -468,4 +517,5 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
+
 
