@@ -1,25 +1,79 @@
-// ====================
-// CARREGAR DADOS
-// ====================
+// Adicionar o script do Supabase no HTML (antes do seu script JS):
+// <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+// =====================
+// SUPABASE CONFIG
+// =====================
+const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs';
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+// =====================
+// CARREGAR DADOS DO SUPABASE
+// =====================
 let data;
-fetch('data.json')
-    .then(response => response.json())
-    .then(json => {
-        data = json;
+async function loadData() {
+    try {
+        // Buscar domínios
+        const { data: domainsData, error: domainsError } = await supabase
+            .from('domains')
+            .select('name');
+        if (domainsError) throw domainsError;
+
+        // Buscar classes
+        const { data: classesData, error: classesError } = await supabase
+            .from('classes')
+            .select('name');
+        if (classesError) throw classesError;
+
+        // Buscar subclasses (assumindo tabela com colunas: class_name, subclass_name)
+        const { data: subclassesData, error: subclassesError } = await supabase
+            .from('subclasses')
+            .select('class_name, subclass_name');
+        if (subclassesError) throw subclassesError;
+
+        // Organizar subclasses em um objeto
+        const subclasses = {};
+        subclassesData.forEach(item => {
+            if (!subclasses[item.class_name]) subclasses[item.class_name] = [];
+            subclasses[item.class_name].push(item.subclass_name);
+        });
+
+        // Buscar cartas (assumindo tabela com colunas: name, level, subtype, subclass, domain, type, image, recoil)
+        const { data: cardsData, error: cardsError } = await supabase
+            .from('cards')
+            .select('*');
+        if (cardsError) throw cardsError;
+
+        // Estruturar os dados como no original
+        data = {
+            domains: domainsData.map(d => d.name),
+            classes: classesData.map(c => c.name),
+            subclasses: subclasses,
+            cards: cardsData
+        };
+
         init();
-    })
-    .catch(error => console.error('Erro ao carregar dados:', error));
+    } catch (error) {
+        console.error('Erro ao carregar dados do Supabase:', error);
+    }
+}
+
+// Chamar loadData em vez de fetch
+loadData();
 
 // =====================
 // ESTADO GLOBAL
 // =====================
 let selectedDomains = [];
 let unlockedCards = [];
-let blockLimits = { ancestralidade: 2, subclasse: 3, loadouts: 5, cofre: 5 };
-let blockCards = { ancestralidade: [], subclasse: [], loadouts: [], cofre: [] };
+let blockLimits = { ancestralidade: 2, subclasse: 3, loadouts: 5, cofre: 5 }; // Limites base; subclasse será dinâmico
+let blockCards = { ancestralidade: [[], []], subclasse: [[], [], []], loadouts: [], cofre: [] }; // Agora arrays para suportar múltiplas cartas por slot
 let currentBlock = null;
 let totalRecoil = 0; // Rastrear recuo total baseado em trocas
-let selectedCardNames = new Set(); // Novo: para impedir seleção duplicada de cartas
+let selectedCardNames = new Set(); // Para impedir seleção duplicada de cartas
+let mesticoEnabled = false; // Estado do campo Mestiço
+let extraSubclasses = []; // Lista de subclasses extras
 
 // Viewer
 let currentViewedCard = null;
@@ -44,10 +98,11 @@ function init() {
     updateSubclass();
 
     document.getElementById('level').addEventListener('change', updateUnlockedCards);
-    document.getElementById('multiclass').addEventListener('change', updateMulticlassDomains);
+    document.getElementById('multiclass').addEventListener('change', updateMulticlass);
     document.getElementById('primary-domain').addEventListener('change', updateDomains);
     document.getElementById('secondary-domain').addEventListener('change', updateDomains);
     document.getElementById('class-select').addEventListener('change', updateSubclass);
+    document.getElementById('mestico-select').addEventListener('change', updateMestico);
 
     updateUnlockedCards();
     createSlots();
@@ -61,7 +116,10 @@ function createSlots() {
         const container = document.getElementById(`${blockId}-slots`);
         container.innerHTML = '';
 
-        for (let i = 0; i < blockLimits[blockId]; i++) {
+        let numSlots = blockLimits[blockId];
+        // Removido: Não aumentar slots para subclasse extras
+
+        for (let i = 0; i < numSlots; i++) {
             const slot = document.createElement('div');
             slot.className = 'slot';
             slot.textContent = 'Slot Vazio';
@@ -72,7 +130,7 @@ function createSlots() {
 }
 
 // =====================
-// DOMÍNIOS / CLASSES
+// DOMÍNIOS / CLASSES / MESTIÇO
 // =====================
 function updateSubclass() {
     const classVal = document.getElementById('class-select').value;
@@ -101,10 +159,18 @@ function updateDomains() {
     updateUnlockedCards();
 }
 
-function updateMulticlassDomains() {
+function updateMulticlass() {
     const multiclassVal = parseInt(document.getElementById('multiclass').value);
     const extraDomains = document.getElementById('extra-domains');
+    const extraSubclassesDiv = document.getElementById('extra-subclasses');
     extraDomains.innerHTML = '';
+    extraSubclassesDiv.innerHTML = '';
+    extraSubclasses = [];
+
+    // Coletar todas as subclasses únicas para o select
+    const allSubclasses = new Set();
+    Object.values(data.subclasses).forEach(subs => subs.forEach(s => allSubclasses.add(s)));
+    const subclassOptions = Array.from(allSubclasses).map(s => `<option value="${s}">${s}</option>`).join('');
 
     for (let i = 0; i < multiclassVal; i++) {
         extraDomains.innerHTML += `
@@ -116,9 +182,34 @@ function updateMulticlassDomains() {
                 </select>
             </div>
         `;
+
+        extraSubclassesDiv.innerHTML += `
+            <div>
+                <label>Subclasse Extra ${i + 1}:</label>
+                <select onchange="updateExtraSubclasses()">
+                    <option value="">Selecione</option>
+                    ${subclassOptions}
+                </select>
+            </div>
+        `;
     }
 
     updateDomains();
+    createSlots(); // Recriar slots (mas sem aumentar para subclasse)
+}
+
+function updateExtraSubclasses() {
+    extraSubclasses = [];
+    const selects = document.querySelectorAll('#extra-subclasses select');
+    selects.forEach(select => {
+        if (select.value) extraSubclasses.push(select.value);
+    });
+    createSlots(); // Atualizar slots
+}
+
+function updateMestico() {
+    mesticoEnabled = document.getElementById('mestico-select').value === 'sim';
+    createSlots(); // Recriar slots para ajustar limite de Ancestralidade
 }
 
 function updateUnlockedCards() {
@@ -145,20 +236,20 @@ function openModal(blockId, slotIndex) {
     let filtered = unlockedCards;
 
     if (blockId === 'ancestralidade') {
-        // Para Ancestralidade: filtro apenas por subtype (sem domínio)
-        filtered = slotIndex === 0
-            ? filtered.filter(c => c.subtype === 'Ancestralidade-Raça')
-            : filtered.filter(c => c.subtype === 'Ancestralidade-Comunidade');
+        if (slotIndex === 0) {
+            filtered = filtered.filter(c => c.subtype === 'Ancestralidade-Raça');
+        } else {
+            filtered = filtered.filter(c => c.subtype === 'Ancestralidade-Comunidade');
+        }
     } else if (blockId === 'subclasse') {
-        // Para Subclasse: filtro por subtype e pela subclasse escolhida (sem domínio)
-        const selectedSubclass = document.getElementById('subclass-select').value;
+        // Novo: Filtrar por qualquer subclasse selecionada (principal + extras)
+        const selectedSubclasses = [document.getElementById('subclass-select').value, ...extraSubclasses].filter(Boolean);
         const map = ['Foundation', 'Specialization', 'Maestry'];
-        filtered = filtered.filter(c => c.subtype === `Subclasse-${map[slotIndex]}` && c.subclass === selectedSubclass);
+        const subtype = `Subclasse-${map[slotIndex % 3]}`;
+        filtered = filtered.filter(c => c.subtype === subtype && selectedSubclasses.includes(c.subclass));
     } else if (blockId === 'loadouts') {
-        // Para Loadouts: filtro por domínio e tipo (Loadout ou Cofre, pois pode trocar)
         filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
     } else if (blockId === 'cofre') {
-        // Para Cofre: filtro por domínio e tipo (Loadout ou Cofre)
         filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
     }
 
@@ -192,33 +283,44 @@ function selectCard(card) {
     // Adicionar à lista de selecionadas
     selectedCardNames.add(card.name);
 
-    // Se for Loadouts e a carta for do tipo Cofre, fazer a troca
-    if (blockId === 'loadouts' && card.type === 'Cofre') {
-        // Verificar se há uma carta em Loadouts para trocar
-        const existingCard = blockCards[blockId][slotIndex];
-        if (existingCard) {
-            // Mover a carta existente de Loadouts para o primeiro slot vazio em Cofre
-            const cofreSlots = blockCards.cofre;
-            const emptySlotIndex = cofreSlots.findIndex(c => c === null || c === undefined);
-            if (emptySlotIndex !== -1) {
-                cofreSlots[emptySlotIndex] = existingCard;
-                updateSlotDisplay('cofre', emptySlotIndex);
-                // Adicionar recuo da carta movida (que estava em Loadouts)
-                totalRecoil += existingCard.recoil;
-            } else {
-                alert('Não há espaço vazio em Cofre para a troca.');
-                selectedCardNames.delete(card.name); // Reverter
-                return;
+    // Para Ancestralidade Slot 0 (Raça), se Mestiço, permitir múltiplas cartas
+    if (blockId === 'ancestralidade' && slotIndex === 0 && mesticoEnabled) {
+        if (blockCards[blockId][slotIndex].length < 2) {
+            blockCards[blockId][slotIndex].push({
+                ...card,
+                tokens: 0,
+                tokenColor: 'red'
+            });
+        } else {
+            alert('Slot de Raça já tem 2 cartas (Mestiço).');
+            selectedCardNames.delete(card.name);
+            return;
+        }
+    } else {
+        // Para outros slots, substituir
+        if (blockId === 'loadouts' && card.type === 'Cofre') {
+            // Troca para Cofre
+            const existingCard = blockCards[blockId][slotIndex];
+            if (existingCard) {
+                const cofreSlots = blockCards.cofre;
+                const emptySlotIndex = cofreSlots.findIndex(c => c === null || c === undefined);
+                if (emptySlotIndex !== -1) {
+                    cofreSlots[emptySlotIndex] = existingCard;
+                    updateSlotDisplay('cofre', emptySlotIndex);
+                    totalRecoil += existingCard.recoil;
+                } else {
+                    alert('Não há espaço vazio em Cofre para a troca.');
+                    selectedCardNames.delete(card.name);
+                    return;
+                }
             }
         }
+        blockCards[blockId][slotIndex] = {
+            ...card,
+            tokens: 0,
+            tokenColor: 'red'
+        };
     }
-
-    // Colocar a nova carta no slot
-    blockCards[blockId][slotIndex] = {
-        ...card,
-        tokens: 0,
-        tokenColor: 'red' // Cor padrão das fichas
-    };
 
     updateSlotDisplay(blockId, slotIndex);
     closeModal();
@@ -229,19 +331,22 @@ function selectCard(card) {
 // =====================
 function updateSlotDisplay(blockId, slotIndex) {
     const slots = document.getElementById(`${blockId}-slots`).children;
-    const card = blockCards[blockId][slotIndex];
+    const cards = blockCards[blockId][slotIndex];
     const slot = slots[slotIndex];
 
     slot.oncontextmenu = e => {
         e.preventDefault();
-        if (card) {
-            selectedCardNames.delete(card.name); // Remover da lista de selecionadas
+        if (Array.isArray(cards)) {
+            cards.forEach(c => selectedCardNames.delete(c.name));
+            blockCards[blockId][slotIndex] = [];
+        } else {
+            if (cards) selectedCardNames.delete(cards.name);
+            blockCards[blockId][slotIndex] = null;
         }
-        blockCards[blockId][slotIndex] = null;
         updateSlotDisplay(blockId, slotIndex);
     };
 
-    if (!card) {
+    if (!cards || (Array.isArray(cards) && cards.length === 0)) {
         slot.className = 'slot';
         slot.textContent = 'Slot Vazio';
         slot.onclick = () => openModal(blockId, slotIndex);
@@ -249,16 +354,26 @@ function updateSlotDisplay(blockId, slotIndex) {
     }
 
     slot.className = 'slot filled';
-    slot.onclick = () => openCardViewer(card);
+    if (Array.isArray(cards)) {
+        slot.className += ' multi-card';
+        slot.innerHTML = cards.map(card => `
+            <div class="card">
+                <img src="${card.image}" onclick="openCardViewer(${JSON.stringify(card)})">
+            </div>
+        `).join('');
+        slot.onclick = () => openCardViewer(cards); // Passar array para viewer
+    } else {
+        slot.onclick = () => openCardViewer(cards);
+        slot.innerHTML = `
+            <div class="card">
+                <img src="${cards.image}">
+            </div>
+        `;
+    }
 
-    slot.innerHTML = `
-        <div class="card">
-            <img src="${card.image}">
-        </div>
-    `;
-
-    // Renderizar fichas no slot se houver
-    renderTokensOnSlot(slot, card);
+    // Renderizar fichas (apenas para a primeira carta se múltiplas)
+    const cardForTokens = Array.isArray(cards) ? cards[0] : cards;
+    renderTokensOnSlot(slot, cardForTokens);
 }
 
 function renderTokensOnSlot(slot, card) {
@@ -279,17 +394,27 @@ function renderTokensOnSlot(slot, card) {
 // =====================
 // CARD VIEWER + TOKENS
 // =====================
-function openCardViewer(card) {
-    currentViewedCard = card;
+function openCardViewer(cardOrArray) {
+    currentViewedCard = cardOrArray; // Pode ser uma carta ou array
     const viewer = document.getElementById('card-viewer');
-    const viewerImage = document.getElementById('viewer-image');
+    const viewerImages = document.getElementById('viewer-images'); // Assumindo que o HTML foi ajustado para ter este ID
     const tokenColorSelect = document.getElementById('token-color');
 
-    viewerImage.src = card.image;
-    tokenColorSelect.value = card.tokenColor || 'red';
-    viewer.style.display = 'flex';
+    if (Array.isArray(cardOrArray)) {
+        // Exibir múltiplas imagens
+        viewerImages.innerHTML = cardOrArray.map(card => `<img src="${card.image}" onclick="selectCardForTokens(${JSON.stringify(card)})">`).join('');
+        tokenColorSelect.value = cardOrArray[0].tokenColor || 'red'; // Usar cor da primeira
+    } else {
+        viewerImages.innerHTML = `<img src="${cardOrArray.image}">`;
+        tokenColorSelect.value = cardOrArray.tokenColor || 'red';
+    }
 
-    // Renderizar fichas no viewer
+    viewer.style.display = 'flex';
+    renderTokensOnViewer();
+}
+
+function selectCardForTokens(card) {
+    currentViewedCard = card; // Selecionar carta específica para tokens
     renderTokensOnViewer();
 }
 
@@ -323,7 +448,6 @@ document.getElementById('add-token').onclick = () => {
     if (currentViewedCard.tokens < 99) {
         currentViewedCard.tokens++;
         renderTokensOnViewer();
-        // Atualizar o slot correspondente
         updateSlotAfterTokenChange();
     }
 };
@@ -332,7 +456,6 @@ document.getElementById('remove-token').onclick = () => {
     if (currentViewedCard.tokens > 0) {
         currentViewedCard.tokens--;
         renderTokensOnViewer();
-        // Atualizar o slot correspondente
         updateSlotAfterTokenChange();
     }
 };
@@ -340,32 +463,136 @@ document.getElementById('remove-token').onclick = () => {
 document.getElementById('token-color').onchange = (e) => {
     currentViewedCard.tokenColor = e.target.value;
     renderTokensOnViewer();
-    // Atualizar o slot correspondente
     updateSlotAfterTokenChange();
 };
 
 function updateSlotAfterTokenChange() {
-    // Encontrar o bloco e slot da carta atual
     for (const blockId in blockCards) {
-        const index = blockCards[blockId].findIndex(c => c === currentViewedCard);
-        if (index !== -1) {
-            updateSlotDisplay(blockId, index);
-            break;
+        const cards = blockCards[blockId];
+        for (let i = 0; i < cards.length; i++) {
+            if (Array.isArray(cards[i])) {
+                if (cards[i].includes(currentViewedCard)) {
+                    updateSlotDisplay(blockId, i);
+                    return;
+                }
+            } else if (cards[i] === currentViewedCard) {
+                updateSlotDisplay(blockId, i);
+                return;
+            }
         }
     }
 }
 
 // =====================
-// SALVAR PRANCHETA
+// SALVAR PRANCHETA (AGORA COM SUPABASE)
 // =====================
 document.getElementById('save-board').addEventListener('click', saveBoard);
 
-function saveBoard() {
-    // O recuo total já é calculado nas trocas, então apenas exibir
+async function saveBoard() {
+    // Calcular recoil como antes
     document.getElementById('recoil-display').innerHTML = `
         Recuo Total da Prancheta: <strong>-${totalRecoil}</strong><br>
         <small>Aplique este valor na ficha do personagem</small>
     `;
+
+    // Opcional: Salvar a prancheta no Supabase
+    // Assumindo uma tabela 'boards' com colunas: id (auto), name, data (JSON), created_at
+    const boardName = prompt('Nome da Prancheta (opcional):');
+    if (boardName !== null) { // Se não cancelou
+        const boardData = {
+            name: boardName || 'Prancheta Sem Nome',
+            data: JSON.stringify({
+                selectedDomains,
+                blockCards,
+                totalRecoil,
+                selectedCardNames: Array.from(selectedCardNames),
+                mesticoEnabled,
+                extraSubclasses,
+                level: document.getElementById('level').value,
+                multiclass: document.getElementById('multiclass').value,
+                primaryDomain: document.getElementById('primary-domain').value,
+                secondaryDomain: document.getElementById('secondary-domain').value,
+                classSelect: document.getElementById('class-select').value,
+                subclassSelect: document.getElementById('subclass-select').value
+            })
+        };
+
+        try {
+            const { data, error } = await supabase
+                .from('boards')
+                .insert([boardData]);
+            if (error) throw error;
+            alert('Prancheta salva com sucesso!');
+        } catch (error) {
+            console.error('Erro ao salvar prancheta:', error);
+            alert('Erro ao salvar prancheta.');
+        }
+    }
+}
+
+// =====================
+// CARREGAR PRANCHETA (NOVO COM SUPABASE)
+// =====================
+document.getElementById('load-board').addEventListener('click', loadBoard);
+
+async function loadBoard() {
+    try {
+        const { data: boards, error } = await supabase
+            .from('boards')
+            .select('*')
+            .order('created_at', { ascending: false });
+        if (error) throw error;
+
+        if (boards.length === 0) {
+            alert('Nenhuma prancheta salva encontrada.');
+            return;
+        }
+
+        // Simples: Carregar a mais recente ou permitir seleção
+        const board = boards[0]; // Para simplicidade, a mais recente
+        const boardData = JSON.parse(board.data);
+
+        // Restaurar estado
+        selectedDomains = boardData.selectedDomains || [];
+        blockCards = boardData.blockCards || { ancestralidade: [[], []], subclasse: [[], [], []], loadouts: [], cofre: [] };
+        totalRecoil = boardData.totalRecoil || 0;
+        selectedCardNames = new Set(boardData.selectedCardNames || []);
+        mesticoEnabled = boardData.mesticoEnabled || false;
+        extraSubclasses = boardData.extraSubclasses || [];
+
+        // Restaurar selects
+        document.getElementById('level').value = boardData.level || 1;
+        document.getElementById('multiclass').value = boardData.multiclass || 0;
+        document.getElementById('primary-domain').value = boardData.primaryDomain || '';
+        document.getElementById('secondary-domain').value = boardData.secondaryDomain || '';
+        document.getElementById('class-select').value = boardData.classSelect || '';
+        document.getElementById('subclass-select').value = boardData.subclassSelect || '';
+
+        // Atualizar UI
+        updateSubclass();
+        updateMulticlass();
+        updateDomains();
+        updateUnlockedCards();
+        createSlots();
+
+        // Atualizar displays dos slots
+        Object.keys(blockCards).forEach(blockId => {
+            blockCards[blockId].forEach((cards, index) => {
+                updateSlotDisplay(blockId, index);
+            });
+        });
+
+        // Atualizar recoil display
+        document.getElementById('recoil-display').innerHTML = `
+            Recuo Total da Prancheta: <strong>-${totalRecoil}</strong><br>
+            <small>Aplique este valor na ficha do personagem</small>
+        `;
+
+        alert('Prancheta carregada com sucesso!');
+    } catch (error) {
+        console.error('Erro ao carregar prancheta:', error);
+        alert('Erro ao carregar prancheta.');
+    }
 }
 
 // =====================
@@ -375,4 +602,3 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
-
