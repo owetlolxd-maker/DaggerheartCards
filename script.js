@@ -1,418 +1,452 @@
-// ====================
+// =====================
 // CARREGAR DADOS
-// ====================
+// =====================
 let data;
 fetch('data.json')
-.then(response => response.json())
-.then(json => {
-data = json;
-init();
-})
-.catch(error => console.error('Erro ao carregar dados:', error));
-
+    .then(response => response.json())
+    .then(json => {
+        data = json;
+        init();
+    })
+    .catch(error => console.error('Erro ao carregar dados:', error));
 
 // =====================
 // ESTADO GLOBAL
 // =====================
 let selectedDomains = [];
 let unlockedCards = [];
-let blockLimits = { ancestralidade: 2, subclasse: 3, loadouts: 5, cofre: 5 };
-let blockCards = { ancestralidade: [], subclasse: [], loadouts: [], cofre: [] };
+let blockLimits = { ancestralidade: 2, subclasse: 3, loadouts: 5, cofre: 5 }; // Limites base; subclasse será dinâmico
+let blockCards = { ancestralidade: [[], []], subclasse: [[], [], []], loadouts: [], cofre: [] }; // Agora arrays para suportar múltiplas cartas por slot
 let currentBlock = null;
 let totalRecoil = 0; // Rastrear recuo total baseado em trocas
-let selectedCardNames = new Set(); // Novo: para impedir seleção duplicada de cartas
-
+let selectedCardNames = new Set(); // Para impedir seleção duplicada de cartas
+let mesticoEnabled = false; // Estado do campo Mestiço
+let extraSubclasses = []; // Lista de subclasses extras
 
 // Viewer
 let currentViewedCard = null;
-
 
 // =====================
 // INIT
 // =====================
 function init() {
-const primarySelect = document.getElementById('primary-domain');
-const secondarySelect = document.getElementById('secondary-domain');
-const classSelect = document.getElementById('class-select');
+    const primarySelect = document.getElementById('primary-domain');
+    const secondarySelect = document.getElementById('secondary-domain');
+    const classSelect = document.getElementById('class-select');
 
+    data.domains.forEach(d => {
+        primarySelect.innerHTML += `<option value="${d}">${d}</option>`;
+        secondarySelect.innerHTML += `<option value="${d}">${d}</option>`;
+    });
 
-data.domains.forEach(d => {
-    primarySelect.innerHTML += `<option value="${d}">${d}</option>`;
-    secondarySelect.innerHTML += `<option value="${d}">${d}</option>`;
-});
+    data.classes.forEach(c => {
+        classSelect.innerHTML += `<option value="${c}">${c}</option>`;
+    });
 
-data.classes.forEach(c => {
-    classSelect.innerHTML += `<option value="${c}">${c}</option>`;
-});
+    updateSubclass();
 
-updateSubclass();
+    document.getElementById('level').addEventListener('change', updateUnlockedCards);
+    document.getElementById('multiclass').addEventListener('change', updateMulticlass);
+    document.getElementById('primary-domain').addEventListener('change', updateDomains);
+    document.getElementById('secondary-domain').addEventListener('change', updateDomains);
+    document.getElementById('class-select').addEventListener('change', updateSubclass);
+    document.getElementById('mestico-select').addEventListener('change', updateMestico);
 
-document.getElementById('level').addEventListener('change', updateUnlockedCards);
-document.getElementById('multiclass').addEventListener('change', updateMulticlassDomains);
-document.getElementById('primary-domain').addEventListener('change', updateDomains);
-document.getElementById('secondary-domain').addEventListener('change', updateDomains);
-document.getElementById('class-select').addEventListener('change', updateSubclass);
-
-updateUnlockedCards();
-createSlots();
-
+    updateUnlockedCards();
+    createSlots();
 }
-
 
 // =====================
 // SLOTS
 // =====================
 function createSlots() {
-Object.keys(blockLimits).forEach(blockId => {
-const container = document.getElementById(${blockId}-slots);
-container.innerHTML = '';
+    Object.keys(blockLimits).forEach(blockId => {
+        const container = document.getElementById(`${blockId}-slots`);
+        container.innerHTML = '';
 
+        let numSlots = blockLimits[blockId];
+        // Removido: Não aumentar slots para subclasse extras
 
-    for (let i = 0; i < blockLimits[blockId]; i++) {
-        const slot = document.createElement('div');
-        slot.className = 'slot';
-        slot.textContent = 'Slot Vazio';
-        slot.onclick = () => openModal(blockId, i);
-        container.appendChild(slot);
-    }
-});
-
-}
-
-
-// =====================
-// DOMÍNIOS / CLASSES
-// =====================
-function updateSubclass() {
-const classVal = document.getElementById('class-select').value;
-const subclassSelect = document.getElementById('subclass-select');
-subclassSelect.innerHTML = '<option value="">Selecione</option>';
-
-
-if (data.subclasses[classVal]) {
-    data.subclasses[classVal].forEach(s => {
-        subclassSelect.innerHTML += `<option value="${s}">${s}</option>`;
+        for (let i = 0; i < numSlots; i++) {
+            const slot = document.createElement('div');
+            slot.className = 'slot';
+            slot.textContent = 'Slot Vazio';
+            slot.onclick = () => openModal(blockId, i);
+            container.appendChild(slot);
+        }
     });
 }
 
-}
+// =====================
+// DOMÍNIOS / CLASSES / MESTIÇO
+// =====================
+function updateSubclass() {
+    const classVal = document.getElementById('class-select').value;
+    const subclassSelect = document.getElementById('subclass-select');
+    subclassSelect.innerHTML = '<option value="">Selecione</option>';
 
+    if (data.subclasses[classVal]) {
+        data.subclasses[classVal].forEach(s => {
+            subclassSelect.innerHTML += `<option value="${s}">${s}</option>`;
+        });
+    }
+}
 
 function updateDomains() {
-selectedDomains = [
-document.getElementById('primary-domain').value,
-document.getElementById('secondary-domain').value
-].filter(Boolean);
+    selectedDomains = [
+        document.getElementById('primary-domain').value,
+        document.getElementById('secondary-domain').value
+    ].filter(Boolean);
 
+    const multiclassVal = parseInt(document.getElementById('multiclass').value);
+    for (let i = 0; i < multiclassVal; i++) {
+        const extra = document.querySelector(`#extra-domains select:nth-child(${i + 1})`);
+        if (extra?.value) selectedDomains.push(extra.value);
+    }
 
-const multiclassVal = parseInt(document.getElementById('multiclass').value);
-for (let i = 0; i < multiclassVal; i++) {
-    const extra = document.querySelector(`#extra-domains select:nth-child(${i + 1})`);
-    if (extra?.value) selectedDomains.push(extra.value);
+    updateUnlockedCards();
 }
 
-updateUnlockedCards();
+function updateMulticlass() {
+    const multiclassVal = parseInt(document.getElementById('multiclass').value);
+    const extraDomains = document.getElementById('extra-domains');
+    const extraSubclassesDiv = document.getElementById('extra-subclasses');
+    extraDomains.innerHTML = '';
+    extraSubclassesDiv.innerHTML = '';
+    extraSubclasses = [];
 
+    // Coletar todas as subclasses únicas para o select
+    const allSubclasses = new Set();
+    Object.values(data.subclasses).forEach(subs => subs.forEach(s => allSubclasses.add(s)));
+    const subclassOptions = Array.from(allSubclasses).map(s => `<option value="${s}">${s}</option>`).join('');
+
+    for (let i = 0; i < multiclassVal; i++) {
+        extraDomains.innerHTML += `
+            <div>
+                <label>Domínio Extra ${i + 1}:</label>
+                <select onchange="updateDomains()">
+                    <option value="">Selecione</option>
+                    ${data.domains.map(d => `<option value="${d}">${d}</option>`).join('')}
+                </select>
+            </div>
+        `;
+
+        extraSubclassesDiv.innerHTML += `
+            <div>
+                <label>Subclasse Extra ${i + 1}:</label>
+                <select onchange="updateExtraSubclasses()">
+                    <option value="">Selecione</option>
+                    ${subclassOptions}
+                </select>
+            </div>
+        `;
+    }
+
+    updateDomains();
+    createSlots(); // Recriar slots (mas sem aumentar para subclasse)
 }
 
-
-function updateMulticlassDomains() {
-const multiclassVal = parseInt(document.getElementById('multiclass').value);
-const extraDomains = document.getElementById('extra-domains');
-extraDomains.innerHTML = '';
-
-
-for (let i = 0; i < multiclassVal; i++) {
-    extraDomains.innerHTML += `
-        <div>
-            <label>Domínio Extra ${i + 1}:</label>
-            <select onchange="updateDomains()">
-                <option value="">Selecione</option>
-                ${data.domains.map(d => `<option value="${d}">${d}</option>`).join('')}
-            </select>
-        </div>
-    `;
+function updateExtraSubclasses() {
+    extraSubclasses = [];
+    const selects = document.querySelectorAll('#extra-subclasses select');
+    selects.forEach(select => {
+        if (select.value) extraSubclasses.push(select.value);
+    });
+    createSlots(); // Atualizar slots
 }
 
-updateDomains();
-
+function updateMestico() {
+    mesticoEnabled = document.getElementById('mestico-select').value === 'sim';
+    createSlots(); // Recriar slots para ajustar limite de Ancestralidade
 }
-
 
 function updateUnlockedCards() {
-const level = parseInt(document.getElementById('level').value);
-unlockedCards = data.cards.filter(card => card.level <= level);
+    const level = parseInt(document.getElementById('level').value);
+    unlockedCards = data.cards.filter(card => card.level <= level);
 }
-
 
 // =====================
 // FUNÇÃO AUXILIAR: VERIFICAR SE CARTA JÁ SELECIONADA
 // =====================
 function isCardSelected(cardName) {
-return selectedCardNames.has(cardName);
+    return selectedCardNames.has(cardName);
 }
-
 
 // =====================
 // MODAL DE SELEÇÃO
 // =====================
 function openModal(blockId, slotIndex) {
-currentBlock = { blockId, slotIndex };
+    currentBlock = { blockId, slotIndex };
 
+    const modal = document.getElementById('card-modal');
+    const modalCards = document.getElementById('modal-cards');
 
-const modal = document.getElementById('card-modal');
-const modalCards = document.getElementById('modal-cards');
+    let filtered = unlockedCards;
 
-let filtered = unlockedCards;
+    if (blockId === 'ancestralidade') {
+        if (slotIndex === 0) {
+            filtered = filtered.filter(c => c.subtype === 'Ancestralidade-Raça');
+        } else {
+            filtered = filtered.filter(c => c.subtype === 'Ancestralidade-Comunidade');
+        }
+    } else if (blockId === 'subclasse') {
+        // Novo: Filtrar por qualquer subclasse selecionada (principal + extras)
+        const selectedSubclasses = [document.getElementById('subclass-select').value, ...extraSubclasses].filter(Boolean);
+        const map = ['Foundation', 'Specialization', 'Maestry'];
+        const subtype = `Subclasse-${map[slotIndex % 3]}`;
+        filtered = filtered.filter(c => c.subtype === subtype && selectedSubclasses.includes(c.subclass));
+    } else if (blockId === 'loadouts') {
+        filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
+    } else if (blockId === 'cofre') {
+        filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
+    }
 
-if (blockId === 'ancestralidade') {
-    // Para Ancestralidade: filtro apenas por subtype (sem domínio)
-    filtered = slotIndex === 0
-        ? filtered.filter(c => c.subtype === 'Ancestralidade-Raça')
-        : filtered.filter(c => c.subtype === 'Ancestralidade-Comunidade');
-} else if (blockId === 'subclasse') {
-    // Para Subclasse: filtro por subtype e pela subclasse escolhida (sem domínio)
-    const selectedSubclass = document.getElementById('subclass-select').value;
-    const map = ['Foundation', 'Specialization', 'Maestry'];
-    filtered = filtered.filter(c => c.subtype === `Subclasse-${map[slotIndex]}` && c.subclass === selectedSubclass);
-} else if (blockId === 'loadouts') {
-    // Para Loadouts: filtro por domínio e tipo (Loadout ou Cofre, pois pode trocar)
-    filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
-} else if (blockId === 'cofre') {
-    // Para Cofre: filtro por domínio e tipo (Loadout ou Cofre)
-    filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
+    // Filtrar cartas já selecionadas
+    filtered = filtered.filter(c => !isCardSelected(c.name));
+
+    modalCards.innerHTML = filtered.map(card => `
+        <div class="modal-card" onclick='selectCard(${JSON.stringify(card)})'>
+            <img src="${card.image}">
+            <strong>${card.name}</strong>
+        </div>
+    `).join('');
+
+    modal.style.display = 'flex';
 }
-
-// Filtrar cartas já selecionadas
-filtered = filtered.filter(c => !isCardSelected(c.name));
-
-modalCards.innerHTML = filtered.map(card => `
-    <div class="modal-card" onclick='selectCard(${JSON.stringify(card)})'>
-        <img src="${card.image}">
-        <strong>${card.name}</strong>
-    </div>
-`).join('');
-
-modal.style.display = 'flex';
-
-}
-
 
 function closeModal() {
-document.getElementById('card-modal').style.display = 'none';
-currentBlock = null;
+    document.getElementById('card-modal').style.display = 'none';
+    currentBlock = null;
 }
-
 
 function selectCard(card) {
-const { blockId, slotIndex } = currentBlock;
+    const { blockId, slotIndex } = currentBlock;
 
+    // Verificar se a carta já está selecionada
+    if (isCardSelected(card.name)) {
+        alert('Esta carta já foi selecionada.');
+        return;
+    }
 
-// Verificar se a carta já está selecionada
-if (isCardSelected(card.name)) {
-    alert('Esta carta já foi selecionada.');
-    return;
-}
+    // Adicionar à lista de selecionadas
+    selectedCardNames.add(card.name);
 
-// Adicionar à lista de selecionadas
-selectedCardNames.add(card.name);
-
-// Se for Loadouts e a carta for do tipo Cofre, fazer a troca
-if (blockId === 'loadouts' && card.type === 'Cofre') {
-    // Verificar se há uma carta em Loadouts para trocar
-    const existingCard = blockCards[blockId][slotIndex];
-    if (existingCard) {
-        // Mover a carta existente de Loadouts para o primeiro slot vazio em Cofre
-        const cofreSlots = blockCards.cofre;
-        const emptySlotIndex = cofreSlots.findIndex(c => c === null || c === undefined);
-        if (emptySlotIndex !== -1) {
-            cofreSlots[emptySlotIndex] = existingCard;
-            updateSlotDisplay('cofre', emptySlotIndex);
-            // Adicionar recuo da carta movida (que estava em Loadouts)
-            totalRecoil += existingCard.recoil;
+    // Para Ancestralidade Slot 0 (Raça), se Mestiço, permitir múltiplas cartas
+    if (blockId === 'ancestralidade' && slotIndex === 0 && mesticoEnabled) {
+        if (blockCards[blockId][slotIndex].length < 2) {
+            blockCards[blockId][slotIndex].push({
+                ...card,
+                tokens: 0,
+                tokenColor: 'red'
+            });
         } else {
-            alert('Não há espaço vazio em Cofre para a troca.');
-            selectedCardNames.delete(card.name); // Reverter
+            alert('Slot de Raça já tem 2 cartas (Mestiço).');
+            selectedCardNames.delete(card.name);
             return;
         }
+    } else {
+        // Para outros slots, substituir
+        if (blockId === 'loadouts' && card.type === 'Cofre') {
+            // Troca para Cofre
+            const existingCard = blockCards[blockId][slotIndex];
+            if (existingCard) {
+                const cofreSlots = blockCards.cofre;
+                const emptySlotIndex = cofreSlots.findIndex(c => c === null || c === undefined);
+                if (emptySlotIndex !== -1) {
+                    cofreSlots[emptySlotIndex] = existingCard;
+                    updateSlotDisplay('cofre', emptySlotIndex);
+                    totalRecoil += existingCard.recoil;
+                } else {
+                    alert('Não há espaço vazio em Cofre para a troca.');
+                    selectedCardNames.delete(card.name);
+                    return;
+                }
+            }
+        }
+        blockCards[blockId][slotIndex] = {
+            ...card,
+            tokens: 0,
+            tokenColor: 'red'
+        };
     }
+
+    updateSlotDisplay(blockId, slotIndex);
+    closeModal();
 }
-
-// Colocar a nova carta no slot
-blockCards[blockId][slotIndex] = {
-    ...card,
-    tokens: 0,
-    tokenColor: 'red' // Cor padrão das fichas
-};
-
-updateSlotDisplay(blockId, slotIndex);
-closeModal();
-
-}
-
 
 // =====================
 // SLOT VISUAL
 // =====================
 function updateSlotDisplay(blockId, slotIndex) {
-const slots = document.getElementById(${blockId}-slots).children;
-const card = blockCards[blockId][slotIndex];
-const slot = slots[slotIndex];
+    const slots = document.getElementById(`${blockId}-slots`).children;
+    const cards = blockCards[blockId][slotIndex];
+    const slot = slots[slotIndex];
 
+    slot.oncontextmenu = e => {
+        e.preventDefault();
+        if (Array.isArray(cards)) {
+            cards.forEach(c => selectedCardNames.delete(c.name));
+            blockCards[blockId][slotIndex] = [];
+        } else {
+            if (cards) selectedCardNames.delete(cards.name);
+            blockCards[blockId][slotIndex] = null;
+        }
+        updateSlotDisplay(blockId, slotIndex);
+    };
 
-slot.oncontextmenu = e => {
-    e.preventDefault();
-    if (card) {
-        selectedCardNames.delete(card.name); // Remover da lista de selecionadas
+    if (!cards || (Array.isArray(cards) && cards.length === 0)) {
+        slot.className = 'slot';
+        slot.textContent = 'Slot Vazio';
+        slot.onclick = () => openModal(blockId, slotIndex);
+        return;
     }
-    blockCards[blockId][slotIndex] = null;
-    updateSlotDisplay(blockId, slotIndex);
-};
 
-if (!card) {
-    slot.className = 'slot';
-    slot.textContent = 'Slot Vazio';
-    slot.onclick = () => openModal(blockId, slotIndex);
-    return;
+    slot.className = 'slot filled';
+    if (Array.isArray(cards)) {
+        slot.className += ' multi-card';
+        slot.innerHTML = cards.map(card => `
+            <div class="card">
+                <img src="${card.image}" onclick="openCardViewer(${JSON.stringify(card)})">
+            </div>
+        `).join('');
+        slot.onclick = () => openCardViewer(cards); // Passar array para viewer
+    } else {
+        slot.onclick = () => openCardViewer(cards);
+        slot.innerHTML = `
+            <div class="card">
+                <img src="${cards.image}">
+            </div>
+        `;
+    }
+
+    // Renderizar fichas (apenas para a primeira carta se múltiplas)
+    const cardForTokens = Array.isArray(cards) ? cards[0] : cards;
+    renderTokensOnSlot(slot, cardForTokens);
 }
-
-slot.className = 'slot filled';
-slot.onclick = () => openCardViewer(card);
-
-slot.innerHTML = `
-    <div class="card">
-        <img src="${card.image}">
-    </div>
-`;
-
-// Renderizar fichas no slot se houver
-renderTokensOnSlot(slot, card);
-
-}
-
 
 function renderTokensOnSlot(slot, card) {
-let token = slot.querySelector('.token');
-if (card.tokens > 0) {
-if (!token) {
-token = document.createElement('div');
-token.className = 'token';
-slot.appendChild(token);
+    let token = slot.querySelector('.token');
+    if (card.tokens > 0) {
+        if (!token) {
+            token = document.createElement('div');
+            token.className = 'token';
+            slot.appendChild(token);
+        }
+        token.style.background = card.tokenColor;
+        token.textContent = card.tokens > 99 ? '99+' : card.tokens;
+    } else if (token) {
+        token.remove();
+    }
 }
-token.style.background = card.tokenColor;
-token.textContent = card.tokens > 99 ? '99+' : card.tokens;
-} else if (token) {
-token.remove();
-}
-}
-
 
 // =====================
 // CARD VIEWER + TOKENS
 // =====================
-function openCardViewer(card) {
-currentViewedCard = card;
-const viewer = document.getElementById('card-viewer');
-const viewerImage = document.getElementById('viewer-image');
-const tokenColorSelect = document.getElementById('token-color');
+function openCardViewer(cardOrArray) {
+    currentViewedCard = cardOrArray; // Pode ser uma carta ou array
+    const viewer = document.getElementById('card-viewer');
+    const viewerImages = document.getElementById('viewer-images'); // Assumindo que o HTML foi ajustado para ter este ID
+    const tokenColorSelect = document.getElementById('token-color');
 
+    if (Array.isArray(cardOrArray)) {
+        // Exibir múltiplas imagens
+        viewerImages.innerHTML = cardOrArray.map(card => `<img src="${card.image}" onclick="selectCardForTokens(${JSON.stringify(card)})">`).join('');
+        tokenColorSelect.value = cardOrArray[0].tokenColor || 'red'; // Usar cor da primeira
+    } else {
+        viewerImages.innerHTML = `<img src="${cardOrArray.image}">`;
+        tokenColorSelect.value = cardOrArray.tokenColor || 'red';
+    }
 
-viewerImage.src = card.image;
-tokenColorSelect.value = card.tokenColor || 'red';
-viewer.style.display = 'flex';
-
-// Renderizar fichas no viewer
-renderTokensOnViewer();
-
+    viewer.style.display = 'flex';
+    renderTokensOnViewer();
 }
 
+function selectCardForTokens(card) {
+    currentViewedCard = card; // Selecionar carta específica para tokens
+    renderTokensOnViewer();
+}
 
 function closeViewer() {
-document.getElementById('card-viewer').style.display = 'none';
-currentViewedCard = null;
+    document.getElementById('card-viewer').style.display = 'none';
+    currentViewedCard = null;
 }
-
 
 function renderTokensOnViewer() {
-const viewerContent = document.querySelector('.card-viewer-content');
-let token = viewerContent.querySelector('.token');
+    const viewerContent = document.querySelector('.card-viewer-content');
+    let token = viewerContent.querySelector('.token');
 
-
-if (currentViewedCard.tokens > 0) {
-    if (!token) {
-        token = document.createElement('div');
-        token.className = 'token';
-        token.style.position = 'absolute';
-        token.style.top = '10px';
-        token.style.right = '10px';
-        viewerContent.appendChild(token);
+    if (currentViewedCard.tokens > 0) {
+        if (!token) {
+            token = document.createElement('div');
+            token.className = 'token';
+            token.style.position = 'absolute';
+            token.style.top = '10px';
+            token.style.right = '10px';
+            viewerContent.appendChild(token);
+        }
+        token.style.background = currentViewedCard.tokenColor;
+        token.textContent = currentViewedCard.tokens > 99 ? '99+' : currentViewedCard.tokens;
+    } else if (token) {
+        token.remove();
     }
-    token.style.background = currentViewedCard.tokenColor;
-    token.textContent = currentViewedCard.tokens > 99 ? '99+' : currentViewedCard.tokens;
-} else if (token) {
-    token.remove();
 }
-
-}
-
 
 // Eventos dos botões de ficha no viewer
 document.getElementById('add-token').onclick = () => {
-if (currentViewedCard.tokens < 99) {
-currentViewedCard.tokens++;
-renderTokensOnViewer();
-// Atualizar o slot correspondente
-updateSlotAfterTokenChange();
-}
+    if (currentViewedCard.tokens < 99) {
+        currentViewedCard.tokens++;
+        renderTokensOnViewer();
+        updateSlotAfterTokenChange();
+    }
 };
-
 
 document.getElementById('remove-token').onclick = () => {
-if (currentViewedCard.tokens > 0) {
-currentViewedCard.tokens--;
-renderTokensOnViewer();
-// Atualizar o slot correspondente
-updateSlotAfterTokenChange();
-}
+    if (currentViewedCard.tokens > 0) {
+        currentViewedCard.tokens--;
+        renderTokensOnViewer();
+        updateSlotAfterTokenChange();
+    }
 };
-
 
 document.getElementById('token-color').onchange = (e) => {
-currentViewedCard.tokenColor = e.target.value;
-renderTokensOnViewer();
-// Atualizar o slot correspondente
-updateSlotAfterTokenChange();
+    currentViewedCard.tokenColor = e.target.value;
+    renderTokensOnViewer();
+    updateSlotAfterTokenChange();
 };
 
-
 function updateSlotAfterTokenChange() {
-// Encontrar o bloco e slot da carta atual
-for (const blockId in blockCards) {
-const index = blockCards[blockId].findIndex(c => c === currentViewedCard);
-if (index !== -1) {
-updateSlotDisplay(blockId, index);
-break;
+    for (const blockId in blockCards) {
+        const cards = blockCards[blockId];
+        for (let i = 0; i < cards.length; i++) {
+            if (Array.isArray(cards[i])) {
+                if (cards[i].includes(currentViewedCard)) {
+                    updateSlotDisplay(blockId, i);
+                    return;
+                }
+            } else if (cards[i] === currentViewedCard) {
+                updateSlotDisplay(blockId, i);
+                return;
+            }
+        }
+    }
 }
-}
-}
-
 
 // =====================
 // SALVAR PRANCHETA
 // =====================
 document.getElementById('save-board').addEventListener('click', saveBoard);
 
-
 function saveBoard() {
-// O recuo total já é calculado nas trocas, então apenas exibir
-document.getElementById('recoil-display').innerHTML =         Recuo Total da Prancheta: <strong>-${totalRecoil}</strong><br>         <small>Aplique este valor na ficha do personagem</small>    ;
+    document.getElementById('recoil-display').innerHTML = `
+        Recuo Total da Prancheta: <strong>-${totalRecoil}</strong><br>
+        <small>Aplique este valor na ficha do personagem</small>
+    `;
 }
-
 
 // =====================
 // FUNÇÃO PARA TOGGLE DOMAIN LIST (se necessário)
 // =====================
 function toggleDomainList(type) {
-const list = document.getElementById(${type}-domain-list);
-list.style.display = list.style.display === 'block' ? 'none' : 'block';
+    const list = document.getElementById(`${type}-domain-list`);
+    list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
