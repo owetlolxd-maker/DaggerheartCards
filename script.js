@@ -1,6 +1,6 @@
 const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs';
-const supabase = window.supabase.createClient(
+const client = window.supabase.createClient(
   supabaseUrl,
   supabaseKey,
   {
@@ -451,7 +451,7 @@ async function saveBoard() {
         subclassSelected: document.getElementById('subclass-select').value
     };
 
-    const { error } = await supabase
+    const { error } = await client
         .from('pranchetas')
         .upsert(pranchetaData, { onConflict: 'user_id' });
 
@@ -469,5 +469,6 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
+
 
 
