@@ -1,76 +1,10 @@
-        const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co'
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs'
+// ====================
+// SUPABASE CONFIG
+// ====================
+const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs';
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey)
-
-        async function signUp(email, password) {
-            const { error } = await supabaseClient.auth.signUp({ email, password })
-            if (error) {
-                alert(error.message)
-            } else {
-                alert('Conta criada! Verifique o email.')
-            }
-        }
-
-        async function signIn(email, password) {
-            const { error } = await supabaseClient.auth.signInWithPassword({
-                email,
-                password
-            })
-            if (error) alert(error.message)
-        }
-
-        async function logout() {
-            await saveFicha(); // Salvar ficha atual antes de sair
-            await supabaseClient.auth.signOut()
-            location.reload()
-        }
-
-        async function getUser() {
-            const { data } = await supabaseClient.auth.getUser()
-            return data.user
-        }
-
-        async function saveSheet(sheetName, trackersData) {
-            const user = await getUser()
-            if (!user) return alert('Faça login primeiro')
-
-            const { error } = await supabaseClient
-                .from('sheets')
-                .insert({
-                    user_id: user.id,
-                    name: sheetName,
-                    data: trackersData
-                })
-
-            if (error) {
-                console.error(error)
-                alert('Erro ao salvar ficha')
-            }
-        }
-
-        async function updateSheet(sheetId, trackersData) {
-            const { error } = await supabaseClient
-                .from('sheets')
-                .update({ data: trackersData })
-                .eq('id', sheetId)
-
-            if (error) console.error(error)
-        }
-
-        async function loadSheets() {
-            const { data, error } = await supabaseClient
-                .from('sheets')
-                .select('*')
-                .order('created_at', { ascending: false })
-
-            if (error) {
-                console.error(error)
-                return []
-            }
-
-            return data
-        }
 // ====================
 // CARREGAR DADOS
 // ====================
@@ -87,28 +21,36 @@ fetch('data.json')
 // AUTENTICAÇÃO
 // ====================
 async function login(email, password) {
-    const { data: user, error } = await supabase.auth.signUp({ email, password });
-    if (error && error.message !== 'User already registered') {
-        document.getElementById('auth-message').textContent = 'Erro: ' + error.message;
+    console.log('Tentando login...');
+    // Tentar login primeiro
+    const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({ email, password });
+    if (!loginError) {
+        console.log('Login bem-sucedido:', loginData);
+        document.getElementById('auth-message').textContent = 'Login bem-sucedido!';
         return;
     }
-    // Tentar login se sign-up falhar por já registrado
-    const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({ email, password });
-    if (loginError) {
-        document.getElementById('auth-message').textContent = 'Erro no login: ' + loginError.message;
+
+    console.log('Login falhou, tentando sign-up:', loginError.message);
+    // Se login falhar, tentar sign-up
+    const { data: signUpData, error: signUpError } = await supabase.auth.signUp({ email, password });
+    if (signUpError) {
+        console.error('Erro no sign-up:', signUpError);
+        document.getElementById('auth-message').textContent = 'Erro: ' + signUpError.message;
     } else {
-        document.getElementById('auth-message').textContent = 'Login bem-sucedido!';
-        checkAuthAndInit();
+        console.log('Sign-up bem-sucedido:', signUpData);
+        document.getElementById('auth-message').textContent = 'Conta criada! Verifique seu email para confirmar.';
     }
 }
 
 async function logout() {
+    console.log('Fazendo logout...');
     await supabase.auth.signOut();
     location.reload();
 }
 
-function checkAuthAndInit() {
-    const user = supabase.auth.getUser();
+async function checkAuthAndInit() {
+    const { data: { user }, error } = await supabase.auth.getUser();
+    console.log('Estado de auth:', user ? 'Logado' : 'Não logado', error);
     if (user) {
         document.getElementById('auth-section').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
@@ -121,11 +63,21 @@ function checkAuthAndInit() {
     }
 }
 
+// Listener para mudanças de auth
+supabase.auth.onAuthStateChange((event, session) => {
+    console.log('Auth state change:', event, session);
+    checkAuthAndInit();
+});
+
 // Eventos de autenticação
-document.getElementById('login-btn').addEventListener('click', () => {
+document.getElementById('login-btn').addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    login(email, password);
+    if (!email || !password) {
+        document.getElementById('auth-message').textContent = 'Preencha email e senha.';
+        return;
+    }
+    await login(email, password);
 });
 document.getElementById('logout-btn').addEventListener('click', logout);
 
@@ -342,7 +294,7 @@ function updateSlotDisplay(blockId, slotIndex) {
     slot.oncontextmenu = e => {
         e.preventDefault();
         if (card) {
-            selectedCardNames.delete(card.name); // Remover da lista de selecionadas
+            selectedCardNames.delete(card.name);
         }
         blockCards[blockId][slotIndex] = null;
         updateSlotDisplay(blockId, slotIndex);
@@ -364,7 +316,6 @@ function updateSlotDisplay(blockId, slotIndex) {
         </div>
     `;
 
-    // Renderizar fichas no slot se houver
     renderTokensOnSlot(slot, card);
 }
 
@@ -396,7 +347,6 @@ function openCardViewer(card) {
     tokenColorSelect.value = card.tokenColor || 'red';
     viewer.style.display = 'flex';
 
-    // Renderizar fichas no viewer
     renderTokensOnViewer();
 }
 
@@ -425,12 +375,10 @@ function renderTokensOnViewer() {
     }
 }
 
-// Eventos dos botões de ficha no viewer
 document.getElementById('add-token').onclick = () => {
     if (currentViewedCard.tokens < 99) {
         currentViewedCard.tokens++;
         renderTokensOnViewer();
-        // Atualizar o slot correspondente
         updateSlotAfterTokenChange();
     }
 };
@@ -439,7 +387,6 @@ document.getElementById('remove-token').onclick = () => {
     if (currentViewedCard.tokens > 0) {
         currentViewedCard.tokens--;
         renderTokensOnViewer();
-        // Atualizar o slot correspondente
         updateSlotAfterTokenChange();
     }
 };
@@ -447,12 +394,10 @@ document.getElementById('remove-token').onclick = () => {
 document.getElementById('token-color').onchange = (e) => {
     currentViewedCard.tokenColor = e.target.value;
     renderTokensOnViewer();
-    // Atualizar o slot correspondente
     updateSlotAfterTokenChange();
 };
 
 function updateSlotAfterTokenChange() {
-    // Encontrar o bloco e slot da carta atual
     for (const blockId in blockCards) {
         const index = blockCards[blockId].findIndex(c => c === currentViewedCard);
         if (index !== -1) {
@@ -468,13 +413,12 @@ function updateSlotAfterTokenChange() {
 document.getElementById('save-board').addEventListener('click', saveBoard);
 
 async function saveBoard() {
-    const user = await supabase.auth.getUser();
-    if (!user.data.user) {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
         alert('Você precisa estar logado para salvar a prancheta.');
         return;
     }
 
-    // Calcular recuo total
     totalRecoil = 0;
     Object.values(blockCards).forEach(block => {
         block.forEach(card => {
@@ -487,9 +431,8 @@ async function saveBoard() {
         <small>Aplique este valor na ficha do personagem</small>
     `;
 
-    // Salvar no Supabase (tabela 'pranchetas' - crie via painel do Supabase)
     const pranchetaData = {
-        user_id: user.data.user.id,
+        user_id: user.id,
         selectedDomains,
         blockCards,
         totalRecoil,
@@ -517,5 +460,3 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
-
-
