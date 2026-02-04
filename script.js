@@ -1,4 +1,11 @@
 // ====================
+// SUPABASE CONFIG
+// ====================
+const supabaseUrl = 'https://ynznnuogfedbvxoojcdp.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluem5udW9nZmVkYnZ4b29qY2RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNTA0MTcsImV4cCI6MjA4NTcyNjQxN30._RhkU6Fg-VR0eMFDYTF-LVnLgqRDuuFOr0xhsACSczs';
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+// ====================
 // CARREGAR DADOS
 // ====================
 let data;
@@ -6,27 +13,73 @@ fetch('data.json')
     .then(response => response.json())
     .then(json => {
         data = json;
-        init();
+        checkAuthAndInit();
     })
     .catch(error => console.error('Erro ao carregar dados:', error));
 
-// =====================
+// ====================
+// AUTENTICAÇÃO
+// ====================
+async function login(email, password) {
+    const { data: user, error } = await supabase.auth.signUp({ email, password });
+    if (error && error.message !== 'User already registered') {
+        document.getElementById('auth-message').textContent = 'Erro: ' + error.message;
+        return;
+    }
+    // Tentar login se sign-up falhar por já registrado
+    const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({ email, password });
+    if (loginError) {
+        document.getElementById('auth-message').textContent = 'Erro no login: ' + loginError.message;
+    } else {
+        document.getElementById('auth-message').textContent = 'Login bem-sucedido!';
+        checkAuthAndInit();
+    }
+}
+
+async function logout() {
+    await supabase.auth.signOut();
+    location.reload();
+}
+
+function checkAuthAndInit() {
+    const user = supabase.auth.getUser();
+    if (user) {
+        document.getElementById('auth-section').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('logout-btn').style.display = 'inline';
+        init();
+    } else {
+        document.getElementById('auth-section').style.display = 'block';
+        document.getElementById('main-content').style.display = 'none';
+        document.getElementById('logout-btn').style.display = 'none';
+    }
+}
+
+// Eventos de autenticação
+document.getElementById('login-btn').addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    login(email, password);
+});
+document.getElementById('logout-btn').addEventListener('click', logout);
+
+// ====================
 // ESTADO GLOBAL
-// =====================
+// ====================
 let selectedDomains = [];
 let unlockedCards = [];
 let blockLimits = { ancestralidade: 2, subclasse: 3, loadouts: 5, cofre: 5 };
 let blockCards = { ancestralidade: [], subclasse: [], loadouts: [], cofre: [] };
 let currentBlock = null;
-let totalRecoil = 0; // Rastrear recuo total baseado em trocas
-let selectedCardNames = new Set(); // Novo: para impedir seleção duplicada de cartas
+let totalRecoil = 0;
+let selectedCardNames = new Set();
 
 // Viewer
 let currentViewedCard = null;
 
-// =====================
+// ====================
 // INIT
-// =====================
+// ====================
 function init() {
     const primarySelect = document.getElementById('primary-domain');
     const secondarySelect = document.getElementById('secondary-domain');
@@ -53,9 +106,9 @@ function init() {
     createSlots();
 }
 
-// =====================
+// ====================
 // SLOTS
-// =====================
+// ====================
 function createSlots() {
     Object.keys(blockLimits).forEach(blockId => {
         const container = document.getElementById(`${blockId}-slots`);
@@ -71,9 +124,9 @@ function createSlots() {
     });
 }
 
-// =====================
+// ====================
 // DOMÍNIOS / CLASSES
-// =====================
+// ====================
 function updateSubclass() {
     const classVal = document.getElementById('class-select').value;
     const subclassSelect = document.getElementById('subclass-select');
@@ -126,16 +179,16 @@ function updateUnlockedCards() {
     unlockedCards = data.cards.filter(card => card.level <= level);
 }
 
-// =====================
+// ====================
 // FUNÇÃO AUXILIAR: VERIFICAR SE CARTA JÁ SELECIONADA
-// =====================
+// ====================
 function isCardSelected(cardName) {
     return selectedCardNames.has(cardName);
 }
 
-// =====================
+// ====================
 // MODAL DE SELEÇÃO
-// =====================
+// ====================
 function openModal(blockId, slotIndex) {
     currentBlock = { blockId, slotIndex };
 
@@ -145,24 +198,19 @@ function openModal(blockId, slotIndex) {
     let filtered = unlockedCards;
 
     if (blockId === 'ancestralidade') {
-        // Para Ancestralidade: filtro apenas por subtype (sem domínio)
         filtered = slotIndex === 0
             ? filtered.filter(c => c.subtype === 'Ancestralidade-Raça')
             : filtered.filter(c => c.subtype === 'Ancestralidade-Comunidade');
     } else if (blockId === 'subclasse') {
-        // Para Subclasse: filtro por subtype e pela subclasse escolhida (sem domínio)
         const selectedSubclass = document.getElementById('subclass-select').value;
         const map = ['Foundation', 'Specialization', 'Maestry'];
         filtered = filtered.filter(c => c.subtype === `Subclasse-${map[slotIndex]}` && c.subclass === selectedSubclass);
     } else if (blockId === 'loadouts') {
-        // Para Loadouts: filtro por domínio e tipo (Loadout ou Cofre, pois pode trocar)
         filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
     } else if (blockId === 'cofre') {
-        // Para Cofre: filtro por domínio e tipo (Loadout ou Cofre)
         filtered = filtered.filter(c => selectedDomains.includes(c.domain) && (c.type === 'Loadout' || c.type === 'Cofre'));
     }
 
-    // Filtrar cartas já selecionadas
     filtered = filtered.filter(c => !isCardSelected(c.name));
 
     modalCards.innerHTML = filtered.map(card => `
@@ -183,50 +231,43 @@ function closeModal() {
 function selectCard(card) {
     const { blockId, slotIndex } = currentBlock;
 
-    // Verificar se a carta já está selecionada
     if (isCardSelected(card.name)) {
         alert('Esta carta já foi selecionada.');
         return;
     }
 
-    // Adicionar à lista de selecionadas
     selectedCardNames.add(card.name);
 
-    // Se for Loadouts e a carta for do tipo Cofre, fazer a troca
     if (blockId === 'loadouts' && card.type === 'Cofre') {
-        // Verificar se há uma carta em Loadouts para trocar
         const existingCard = blockCards[blockId][slotIndex];
         if (existingCard) {
-            // Mover a carta existente de Loadouts para o primeiro slot vazio em Cofre
             const cofreSlots = blockCards.cofre;
             const emptySlotIndex = cofreSlots.findIndex(c => c === null || c === undefined);
             if (emptySlotIndex !== -1) {
                 cofreSlots[emptySlotIndex] = existingCard;
                 updateSlotDisplay('cofre', emptySlotIndex);
-                // Adicionar recuo da carta movida (que estava em Loadouts)
                 totalRecoil += existingCard.recoil;
             } else {
                 alert('Não há espaço vazio em Cofre para a troca.');
-                selectedCardNames.delete(card.name); // Reverter
+                selectedCardNames.delete(card.name);
                 return;
             }
         }
     }
 
-    // Colocar a nova carta no slot
     blockCards[blockId][slotIndex] = {
         ...card,
         tokens: 0,
-        tokenColor: 'red' // Cor padrão das fichas
+        tokenColor: 'red'
     };
 
     updateSlotDisplay(blockId, slotIndex);
     closeModal();
 }
 
-// =====================
+// ====================
 // SLOT VISUAL
-// =====================
+// ====================
 function updateSlotDisplay(blockId, slotIndex) {
     const slots = document.getElementById(`${blockId}-slots`).children;
     const card = blockCards[blockId][slotIndex];
@@ -360,12 +401,47 @@ function updateSlotAfterTokenChange() {
 // =====================
 document.getElementById('save-board').addEventListener('click', saveBoard);
 
-function saveBoard() {
-    // O recuo total já é calculado nas trocas, então apenas exibir
+async function saveBoard() {
+    const user = await supabase.auth.getUser();
+    if (!user.data.user) {
+        alert('Você precisa estar logado para salvar a prancheta.');
+        return;
+    }
+
+    // Calcular recuo total
+    totalRecoil = 0;
+    Object.values(blockCards).forEach(block => {
+        block.forEach(card => {
+            if (card) totalRecoil += card.recoil;
+        });
+    });
+
     document.getElementById('recoil-display').innerHTML = `
         Recuo Total da Prancheta: <strong>-${totalRecoil}</strong><br>
         <small>Aplique este valor na ficha do personagem</small>
     `;
+
+    // Salvar no Supabase (tabela 'pranchetas' - crie via painel do Supabase)
+    const pranchetaData = {
+        user_id: user.data.user.id,
+        selectedDomains,
+        blockCards,
+        totalRecoil,
+        level: document.getElementById('level').value,
+        multiclass: document.getElementById('multiclass').value,
+        classSelected: document.getElementById('class-select').value,
+        subclassSelected: document.getElementById('subclass-select').value
+    };
+
+    const { error } = await supabase
+        .from('pranchetas')
+        .upsert(pranchetaData, { onConflict: 'user_id' });
+
+    if (error) {
+        alert('Erro ao salvar: ' + error.message);
+    } else {
+        alert('Prancheta salva com sucesso!');
+    }
 }
 
 // =====================
@@ -375,4 +451,3 @@ function toggleDomainList(type) {
     const list = document.getElementById(`${type}-domain-list`);
     list.style.display = list.style.display === 'block' ? 'none' : 'block';
 }
-
